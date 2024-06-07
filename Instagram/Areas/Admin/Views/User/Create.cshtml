@@ -1,0 +1,55 @@
+﻿@model AppUser
+<div style="margin-top:12px; margin-left:19%;" class="ease-soft-in-out relative h-full max-h-screen rounded-xl transition-all duration-200 w-[81%] overflow-hidden left-0 ml-0 mr-6">
+        <h1 class="text-2xl font-semibold mb-4 pl-8">Create User</h1>
+    <form class="block w-full" asp-action="Create" method="post" enctype="multipart/form-data">
+          <div style="width:75%; margin-left:4%;" class="form-container flex justify-between">
+              <div class="left-side flex flex-col">
+                <img style="width: 180px; height: 180px; clip-path: circle(41% at 49% 52%); margin-left: 40px;" class="rounded-full" src="~/client/assets/images/profile-photos/no-profile-photo.jpeg" />
+                <label for="ProfilePic" style="margin-bottom: 4px; font-weight:700;" class="text-gray-700">Profile photo</label>
+                <input type="File" asp-for="ProfilePic" id="ProfilePic" placeholder="File" style="width:260px; height:40px;" class="px-2 py-2 border rounded focus:outline-none focus:border-blue-500 text-xs">
+                <span asp-validation-for="ProfilePic" class="text-red-800"></span>
+              </div>
+            <div class="middle-side">
+                <div class="mb-4">
+                    <label for="UserName" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
+                    <input type="text" asp-for="UserName" id="Username" placeholder="Username" style="width:260px; height:40px;" class="px-2 py-2 border rounded focus:outline-none focus:border-blue-500 text-xs">
+                    <span asp-validation-for="UserName" class="text-red-800 "></span>
+                </div>
+                <div class="mb-4">
+                    <label for="Email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                    <input type="text" asp-for="Email" id="Email" placeholder="Email" style="width:260px; height:40px;" class="px-2 py-2 border rounded focus:outline-none focus:border-blue-500 text-xs">
+                    <span asp-validation-for="Email" class="text-red-800 "></span>
+                </div>
+                <div class="mb-4">
+                    <label for="Fullname" class="block text-gray-700 text-sm font-bold mb-2">Fullname</label>
+                    <input type="text" asp-for="Fullname" id="Name" placeholder="Name" style="width:260px; height:40px;" class="px-2 py-2 border rounded focus:outline-none focus:border-blue-500 text-xs">
+                    <span asp-validation-for="Fullname" class="text-red-800"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="Bio" class="block text-gray-700 text-sm font-bold mb-2">Bio (optional)</label>
+                    <input type="text" asp-for="Bio" id="Bio" placeholder="Bio" style="width:260px; height:40px;" class="px-2 py-2 border rounded focus:outline-none focus:border-blue-500 text-xs">
+                    <span asp-validation-for="Bio" class="text-red-800 "></span>
+                </div>
+            </div>
+@*             <div class="right-side">
+                <div class="mb-4">
+                    <label for="Email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                    <input type="email" asp-for="Email" id="Email" placeholder="Email" style="width:260px; height:40px;" class="px-2 py-2 border rounded focus:outline-none focus:border-blue-500 text-xs">
+                    <span asp-validation-for="Email" class="text-red-800"></span>
+                </div>
+                <div class="mb-4">
+                    <label for="Password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                    <input type="password" asp-for="Password" id="Password" placeholder="Password" style="width:260px; height:40px;" class="px-2 py-2 border rounded focus:outline-none focus:border-blue-500 text-xs">
+                    <span asp-validation-for="Password" class="text-red-800"></span>
+                </div> 
+                <div class="mb-4">
+                    <label for="repeatPassword" class="block text-gray-700 text-sm font-bold mb-2">Repeat Password</label>
+                    <input type="password" id="repeatPassword" placeholder="repeat Password" style="width:260px; height:40px;" class="px-2 py-2 border rounded focus:outline-none focus:border-blue-500 text-xs">
+                     <span asp-validation-for="repeatPassword" class="text-red-800"></span>
+               </div>
+            </div> *@
+          </div>
+        <button style="background-color:slategray; margin-left:69.5%; margin-top:auto; border-radius: 6px;" class="text-white font-bold py-2 px-6 border">Submit</button>
+        
+    </form>
+</div>

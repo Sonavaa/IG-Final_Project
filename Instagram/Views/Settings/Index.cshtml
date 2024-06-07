@@ -1,0 +1,124 @@
+﻿@using Instagram.ViewModels.SettingsViewModel
+@model SettingsVm
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="~/client/assets/css/settings.css" />
+<div class="settings-container">
+    <div class="static-side">
+        <h3>Settings</h3>
+        <div class="meta">
+            <span id="meta">
+                <img src="~/client/assets/images/icon/meta-icon.svg" alt="" />
+                Meta
+            </span>
+            <h4 id="center">Accounts Center</h4>
+            <span>
+                Manage your connected experiences and account settings across Meta
+                technologies.
+            </span>
+            <p>
+                <i class="fa-solid fa-user" style="margin-right: 9px"></i>Personal
+                details
+            </p>
+            <p><i class="fa-solid fa-fingerprint"></i> Password and security</p>
+            <p><i class="fa-solid fa-microchip"></i> Ad preferences</p>
+            <a id="see-more" href="#">See more in Accounts Center</a>
+        </div>
+        <p style="margin: 15px 0 15px 25px; font-size: 12px">
+            How you use Instagram
+        </p>
+        <div class="edit-profile row active">
+            <i style="
+              font-size: 14px;
+              border: 2px solid #fff;
+              border-radius: 50px;
+              padding: 4px 5px;
+              margin: 15px 0 15px -2px;
+            "
+               class="fa-regular fa-user"></i>
+            <span>Edit profile</span>
+        </div>
+        <div class="notfications row">
+            <i class="fa-regular fa-bell"></i>
+            <span>Notfications</span>
+        </div>
+        <p style="margin: 15px 0 15px 25px; font-size: 12px">
+            Who can see your content
+        </p>
+        <div class="privacy row">
+            <i class="fa-solid fa-lock"></i>
+            <span>Account privacy</span>
+        </div>
+        <div class="close-friends row">
+            <i style="margin-left: -2px" class="fa-regular fa-star"></i>
+            <span>Close friends</span>
+        </div>
+        <div class="blocked row">
+            <i class="fa-solid fa-ban"></i>
+            <span>Blocked</span>
+        </div>
+    </div>
+    <div class="dynamic-side Update-Profile">
+        <h2 id="edit-profile">Edit profile</h2>
+        <div class="about-profile">
+            <div class="left">
+                @if (Model.User.ProfilePic == null)
+                {
+                    <img src="~/client/assets/images/profile-photos/no-profile-photo.jpg" alt="" />
+                }
+                else
+                {
+                    <img src="~/client/assets/images/profile-photos/@Model.User.ProfilePic" alt="" />
+                }
+                <div class="info">
+                    <p id="userName">@Model.User.UserName</p>
+                    <p id="name">@Model.User.Fullname</p>
+                </div>
+            </div>
+
+            <span id="change-photo" style="cursor: pointer;">Change photo</span>
+            <input type="file" value="" style="display: none;" id="input">
+        </div>
+        <p style="font-size: 16px; font-weight: bold">Website</p>
+        <input id="web-input" type="text" placeholder="Website" disabled />
+        <span style="font-size: 12px">
+            Editing your links is only available on mobile. Visit the Instagram
+            app and edit your profile to change the websites in your bio.
+        </span>
+        <p style="font-size: 16px; font-weight: bold; margin: 30px 0 16px 0">
+            Bio
+        </p>
+        <textarea name="" id="bio-input" maxlength="150"></textarea>
+        <p style="font-size: 16px; font-weight: bold; margin: 20px 0 10px 0">
+            Gender
+        </p>
+        <select id="gender-selection">
+            <option value="selected" selected disabled>Gender</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">Other</option>
+            <option value="4">Prefer not to say</option>
+        </select>
+        <p style="font-size: 12px">
+            This won’t be part of your public profile.
+        </p>
+        <button id="submit-change" type="submit">Submit</button>
+        <section class="bottom">
+            <p style="display: flex; gap: 20px; margin-bottom: 16px">
+                <a href="https://about.instagram.com/">About</a>
+                <a href="https://help.instagram.com/">Help</a>
+                <a href="https://about.instagram.com/blog">Press</a>
+                <a href="https://developers.facebook.com/docs/instagram">API</a>
+                <a href="https://about.instagram.com/about-us/careers">Jobs</a>
+                <a href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect">Privacy</a>
+                <a href="https://help.instagram.com/581066165581870/">Terms</a>
+                <a href="https://www.instagram.com/explore/locations/">Locations</a>
+                <a href="https://www.instagram.com/language/preferences/?hl=en">Language</a>
+                <a href="https://accountscenter.instagram.com/meta_verified/?entrypoint=web_footer">Meta Verified</a>
+            </p>
+            <p>© 2024 Instagram from Meta</p>
+        </section>
+    </div>
+</div>
+<script src="~/client/assets/js/settings.js"></script>

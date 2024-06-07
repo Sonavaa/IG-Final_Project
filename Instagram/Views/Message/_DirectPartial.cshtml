@@ -1,0 +1,21 @@
+﻿@model List<MyDirect>
+
+@foreach (MyDirect direct in Model)
+{
+    <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+        <span>
+            <img class="w-[50px] h-[50px] rounded-full"
+                 src="~/client/assets/images/profile-photos/@direct.TheOtherWriter.ProfilePic"
+                 alt="" />
+        </span>
+
+        <div class="flex flex-col items-start ml-[11px] mr-1">
+            <p>@direct.TheOtherWriter.UserName</p>
+            <p>sent you a message</p>
+        </div>
+        <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+        <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+        <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+    </a>
+}

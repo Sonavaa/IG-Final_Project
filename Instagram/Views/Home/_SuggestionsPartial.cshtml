@@ -1,0 +1,29 @@
+﻿@using Instagram.ViewModels.HomeViewModel
+@model SuggestionsVm
+@foreach (AppUser user in Model.Suggestions)
+{
+    <div class="suggested-account">
+        <a asp-controller="Profile" asp-action="UserProfile" asp-route-id="@user.Id" class="left-side">
+            @if (user.ProfilePic == null)
+            {
+                <img src="~/client/assets/images/profile-photos/no-profile-photo.jpg" alt="" />
+            }
+            else
+            {
+                <img src="~/client/assets/images/profile-photos/@user.ProfilePic" alt="" />
+            }
+            <div class="info">
+                <p id="userName">@user.UserName</p>
+                <p id="about">Suggested for you</p>
+            </div>
+        </a>
+        @if (user.Followers.Any(u => u.UserFollowerId == Model.MyProfile.Id))
+        {
+            <a asp-controller="Profile" asp-action="UnFollow" asp-route-id="@user.Id">UnFollow</a>
+        }
+        else
+        {
+            <a asp-controller="Profile" asp-action="Follow" asp-route-id="@user.Id">Follow</a>
+        }
+    </div>
+}

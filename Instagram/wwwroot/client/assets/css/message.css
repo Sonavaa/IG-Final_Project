@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&display=swap");
+html {
+  font-family: "Open Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  a {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+  .left-side-menu {
+    width: 75px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    left: 0;
+    border-right: 1px solid gray;
+    padding: 0 14px;
+    position: fixed;
+    z-index: 2;
+    border-right: 1px solid gray;
+  }
+ 
+  .left-side-menu .logo img {
+    scale: 1.1;
+    padding: 0 12px;
+    position: absolute;
+  }
+  .left-side-menu .row {
+    width: 50px !important;
+    height: 46px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 10px;
+    padding: 0px 12px;
+  }
+  .left-side-menu .logo-img {
+    width: 80px !important;
+    height: 70px !important;
+    background-color: #fff;
+    scale: 0.6;
+    margin-left: -17px !important;
+    margin-top: 20px;
+    margin-right: 4 0px !important;
+padding: 0px !important;
+  }
+  .left-side-menu .row:hover {
+    background-color: #313131;
+    transition: 0.2s linear;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .left-side-menu .more {
+    padding-left: 24px;
+  }
+  .left-side-menu .row i {
+    font-size: 20px;
+  }
+  .left-side-menu .row p {
+    font-size: 17px;
+    margin-left: 13px;
+  }
+  .left-side-menu .row img {
+    width: 25px;
+    height: 25px;
+  }
+  .left-side-menu .home img {
+    background-color: #fff;
+    width: 20px;
+    scale: 2.6;
+    border: 3px solid #fff;
+    clip-path: polygon(50% 31%, 66% 47%, 66% 65%, 34% 65%, 34% 47%);
+  }
+  .left-side-menu .explore img {
+    width: 20px;
+  }
+  .left-side-menu .reels img {
+    background: #fff;
+    width: 20px;
+    border-radius: 32%;
+    clip-path: polygon(14% 19%, 88% 19%, 88% 77%, 15% 78%);
+    scale: 1.5;
+  }
+  .left-side-menu .profile img {
+    border-radius: 50px;
+    scale: 1.2;
+  }
+  .left-side-menu .messages img {
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    position: relative;
+  }
+  .left-side-menu .messages p {
+    margin-left: 8px;
+  }
+  .left-side-menu .create p {
+    margin-left: 14px;
+  }
+  .left-side-menu #create-input {
+    display: none;
+    visibility: hidden;
+  }
+  .left-side-menu .profile p {
+    margin-left: 7px;
+  }
+  .left-side-menu .more p {
+    margin-left: 11px;
+  }
+  .left-side-menu .threads {
+    margin-top: 35px;
+  }
+  .left-side-menu .threads p {
+    margin-left: 11px;
+  }
+  .left-side-menu .more,
+  .threads i {
+    scale: 1.1;
+  }
+  .left-side-menu .messages .notfication {
+    color: #ffffff;
+    background-color: red;
+    border: 1px solid #000;
+    width: 19px;
+    height: 18px;
+    line-height: 17px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 12px;
+    padding-left: 1px;
+  }
+  .switchModal {
+    width: 383px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    border: 1px solid #6d6d6d;
+    border-radius: 13px;
+    background-color: #fff;
+    color: #000;
+    font-size: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 9999999999999;
+    display: none;
+  }
+  .switchModal .fa-x {
+    margin-left: 85%;
+    padding-top: 18px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .switchModal .ig-img{
+    width: 100%;
+    margin-left: 27%;
+  }
+  .switchModal img {
+    width: 175px;
+    height: 51px;
+    margin-bottom: 35px;
+    margin-top: 35px;
+  }
+  .switchModal input {
+    width: 252px;
+    height: 36px;
+    padding: 9px 0 7px 8px;
+    margin-bottom: 5px;
+  }
+  .switchModal input:focus {
+    outline-color: #d4cece !important;
+  }
+  .form-check {
+    display: flex;
+    align-self: baseline;
+    margin: 5px 0 0 66px;
+  }
+  .form-check input {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+  .switchModal button {
+    width: 252px;
+    height: 33px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0;
+    background-color: #1698ee;
+    color: #fff;
+  }
+  .switchModal a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0 35px 0;
+    color: #00376b !important;
+    font-size: 12px;
+  }
+  .new-message-modal input:focus{
+    outline: none;
+    }
+    .new-message-modal input::placeholder{
+      font-size: 14px;
+      font-weight: bold;
+    }
+    

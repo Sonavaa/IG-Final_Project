@@ -1,0 +1,186 @@
+﻿@using Instagram.ViewModels.PostViewModel
+@model PostsVm
+
+@foreach (Post post in Model.Posts)
+{
+    if (post.User.IsPrivate)
+    {
+        if (post.User.Followers.Any(u => u.UserFollowerId == Model.MyProfile.Id) || post.User.UserName == User.Identity.Name)
+        {
+            <div class="post">
+                <!-- 3 Dots Modal on Post (Delete/Cancel) -->
+                <div class="dots">
+                    <a href="" style="color: red !important; font-weight: 700">Report</a>
+                    <a asp-controller="post" asp-action="Delete" asp-route-id="@post.Id" style="color: red !important; font-weight: 700">Delete</a>
+                    <a>Unfollow</a>
+                    <a href="">Add to favorites</a>
+                    <a href="post.html">Go to post</a>
+                    <a href="">Share to</a>
+                    <p id="dots-cancel">Cancel</p>
+                </div>
+                <!-- MyPost Dots Modal -->
+                <div class="myPost-dots">
+                    <a style="color: red !important; font-weight: 700">Delete</a>
+                    <a>Edit</a>
+                    <p id="myPost-cancel">Cancel</p>
+                </div>
+                <div class="top-side">
+                    <a asp-controller="Profile" asp-action="MyProfile" asp-route-id="@post.UserId">
+                        <div class="">
+                            @if (Model.MyProfile.ProfilePic == null)
+                            {
+                                <img src="~/client/assets/images/profile-photos/no-profile-photo.jpg" alt="" />
+                            }
+                            else
+                            {
+                                <img src="~/client/assets/images/profile-photos/@Model.MyProfile.ProfilePic" alt="" />
+                            }
+                        </div>
+                        <div class="threeSpan">
+                            <span id="userName">@Model.MyProfile.UserName</span>
+                            <span id="dot">.</span>
+                            <span id="about-hour">8h</span>
+                            <!-- mavi tik -->
+                        </div>
+                    </a>
+                    <div class="ellipsis">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+
+                <div class="post-view">
+                    <i class="fa-solid fa-heart post-like"></i>
+                    <img data-id="@post.Id" id="post"
+                         src="@post.PostUrl"
+                         alt="post" />
+                    <div class="tagged-people">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+
+                <div class="bottom-side">
+                    <div class="left">
+                        <a asp-controller="Post" asp-action="Like"><i class="fa-regular fa-heart"></i></a>
+                        <img id="post-bottom-comment-icon"
+                             style="width: 22px; height: 22px"
+                             src="~/client/assets/images/icon/bubble-comment-white-icon.svg"
+                             alt="" />
+                        <img style="width: 22px; height: 22px"
+                             src="~/client/assets/images/icon/send-white-icon.svg"
+                             alt="" />
+                    </div>
+                    <i style="font-size: 22px"
+                       class="fa-regular fa-bookmark bookmark"></i>
+                </div>
+                <p><span id="like">14,359</span> likes</p>
+                <p id="caption" class="hidden">
+                    <a href="~/profile.html" id="userName">@post.User.UserName</a> I can feel it.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa,
+                    et. Labore est distinctio impedit odit ab. Accusamus, laborum
+                    quidem, repudiandae itaque facilis sequi doloremque recusandae
+                    nobis quae ab sunt cumque.
+                </p>
+
+                <div class="comment-view">
+                    <span id="userName">thendatype</span>
+                    <span id="comment">dcsdcs</span>
+                    <i class="fa-regular fa-heart mini-heart"></i>
+                </div>
+                <p id="view-comments" style="cursor: pointer">
+                    View all 36 comments
+                </p>
+                <p id="add-comment">Add a comment...</p>
+                <!-- <hr /> -->
+            </div>
+        }
+        else
+        {
+            <div class="d-none"></div>
+        }
+
+    }
+    else
+    {
+        <div class="post">
+            <!-- 3 Dots Modal on Post (Delete/Cancel) -->
+            <div class="dots">
+                <a href="" style="color: red !important; font-weight: 700">Report</a>
+                <a asp-controller="post" asp-action="Delete" asp-route-id="@post.Id" style="color: red !important; font-weight: 700">Delete</a>
+                <a>Unfollow</a>
+                <a href="">Add to favorites</a>
+                <a href="post.html">Go to post</a>
+                <a href="">Share to</a>
+                <p id="dots-cancel">Cancel</p>
+            </div>
+            <!-- MyPost Dots Modal -->
+            <div class="myPost-dots">
+                <a style="color: red !important; font-weight: 700">Delete</a>
+                <a>Edit</a>
+                <p id="myPost-cancel">Cancel</p>
+            </div>
+            <div class="top-side">
+                <a asp-controller="Profile" asp-action="UserProfile" asp-route-id="@post.UserId">
+                    <div class="">
+                        @if (post.User.ProfilePic == null)
+                        {
+                            <img src="~/client/assets/images/profile-photos/no-profile-photo.jpg" alt="" />
+                        }
+                        else
+                        {
+                            <img src="~/client/assets/images/profile-photos/@post.User.ProfilePic" alt="" />
+                        }
+                    </div>
+                    <div class="threeSpan">
+                        <span id="userName">@post.User.UserName</span>
+                        <span id="dot">.</span>
+                        <span id="about-hour">8h</span>
+                        <!-- mavi tik -->
+                    </div>
+                </a>
+                <div class="ellipsis">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </div>
+
+            <div class="post-view">
+                <i class="fa-solid fa-heart post-like"></i>
+                <img data-id="@post.Id" id="post"
+                     src="@post.PostUrl"
+                     alt="post" />
+                <div class="tagged-people">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+
+            <div class="bottom-side">
+                <div class="left">
+                    <i class="fa-regular fa-heart"></i>
+                    <img id="post-bottom-comment-icon"
+                         style="width: 22px; height: 22px"
+                         src="~/client/assets/images/icon/bubble-comment-white-icon.svg"
+                         alt="" />
+                    <img style="width: 22px; height: 22px"
+                         src="~/client/assets/images/icon/send-white-icon.svg"
+                         alt="" />
+                </div>
+                <i style="font-size: 22px"
+                   class="fa-regular fa-bookmark bookmark"></i>
+            </div>
+            <p><span id="like">14,359</span> likes</p>
+            <p id="caption" class="">
+                <a href="~/profile.html" id="userName">@post.User.UserName</a> @post.Caption
+            </p>
+
+            <div class="comment-view">
+                <span id="userName">thendatype</span>
+                <span id="comment">dcsdcs</span>
+                <i class="fa-regular fa-heart mini-heart"></i>
+            </div>
+            <p id="view-comments" style="cursor: pointer">
+                View all 36 comments
+            </p>
+            <p id="add-comment">Add a comment...</p>
+            <!-- <hr /> -->
+        </div>
+    }
+}

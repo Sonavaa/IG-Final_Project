@@ -1,0 +1,481 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link href="~/client/assets/lib/css/emoji.css" rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/client/assets/css/style.css" />
+    <title>Instagram</title>
+</head>
+<body>
+    <!-- Menu -->
+    <div class="left-side-menu">
+        <a asp-controller="Home" asp-action="index">
+            <div class="logo row">
+                <img style="width: 48px; height: 48px"
+                     class="resp-logo"
+                     src="~/client/assets/images/icon/instagram-black-logo.svg"
+                     alt="" />
+                <img style="width: 183px; height: 76px; padding: 2px; margin-left: -8px"
+                     class="text-logo"
+                     src="~/client/assets/images/icon/instagram-text-white-icon.svg"
+                     alt="" />
+            </div>
+        </a>
+        <a asp-controller="Home" asp-action="index">
+            <div class="home row">
+                <img src="~/client/assets/images/icon/home-black-icon.svg" alt="" />
+                <p>Home</p>
+            </div>
+        </a>
+        <a asp-controller="Home" asp-action="SearchUser">
+            <div class="search row">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <p>Search</p>
+            </div>
+        </a>
+        <a href="~/explore.html">
+            <div class="explore row">
+                <img src="~/client/assets/images/icon/explore-tool-white-icon.svg"
+                     alt="" />
+                <p>Explore</p>
+            </div>
+        </a>
+        <a asp-controller="Reels" asp-action="Index">
+            <div class="reels row">
+                <img src="~/client/assets/images/icon/instagram-reels-white-icon.svg"
+                     alt="" />
+                <p>Reels</p>
+            </div>
+        </a>
+        <a asp-controller="Message" asp-action="Index">
+            <div class="messages row">
+                <div class="msg-notfication">
+                    <img src="~/client/assets/images/icon/messenger-white-icon.svg"
+                         alt="" />
+                    <span class="notfication">2</span>
+                </div>
+                <p>Messages</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="notfications row">
+                <i class="fa-regular fa-heart"></i>
+                <p>Notfications</p>
+            </div>
+        </a>
+        <div class="create-row">
+            <div class="create row">
+                <i class="fa-regular fa-square-plus"></i>
+                <p>Create</p>
+            </div>
+        </div>
+        <input type="file" id="create-input" asp-controller="Post" asp-action="Create" formmethod="post" />
+        <a asp-controller="Profile" asp-action="MyProfile">
+            <div class="profile row">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p>Profile</p>
+            </div>
+        </a>
+        <a href="https://www.threads.net/login" target="_blank">
+            <div class="threads row">
+                <img src="~/client/assets/images/icon/threads-white-icon.svg"
+                     alt="" />
+                <p>Threads</p>
+            </div>
+        </a>
+        <div class="more row">
+            <i class="fa-solid fa-bars"></i>
+            <p>More</p>
+        </div>
+    </div>
+    <!-- Search Modal-->
+    <div class="searchModal">
+        <div class="top-side">
+            <h2>Search</h2>
+            <div class="searchBar" id="searchUserInput">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search"
+                       placeholder="Search"
+                       name=""
+                       id="input-searchbar" />
+            </div>
+        </div>
+        <div class="status-bar">
+            <span id="recent">Recent</span>
+            <span id="clear_all" style="cursor: pointer">Clear All</span>
+        </div>
+        <div class="searched-accounts hidden">
+          @*   @{
+                if (User != null)
+                {
+                    @await Html.PartialAsync("_SearchUserPartial.cshtml", User.)
+                }
+                else
+                {
+                    <p style="margin:30px 0 0 25px">User not found</p>
+                }
+            } *@
+        </div>
+    </div>
+    <!-- Notfications -->
+    <div class="notfications-Modal">
+        <div class="top-side">
+            <h2>Notfications</h2>
+        </div>
+        <div class="every-notfication">
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+            <div class="notf-view">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <p><span id="userName">loveframm</span> started following you.</p>
+                <span id="follow-btn">Follow</span>
+            </div>
+        </div>
+    </div>
+    <!-- More Modal -->
+    <div class="menuModal">
+        <a id="setting" asp-controller="Settings" asp-action="Index">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+        <a id="activity">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Your Activity</span>
+        </a>
+        <a id="saved">
+            <i class="fa-regular fa-bookmark" style="margin-right: 14px"></i>
+            <span>Saved</span>
+        </a>
+        <a id="switch-appearance">
+            <i class="fa-regular fa-moon"></i>
+            <span>Switch Appearance</span>
+        </a>
+        <hr style="margin: 10px -9px" />
+        <div id="switch-accounts">Switch Accounts</div>
+        <a asp-controller="Account" asp-action="LogOut" id="logOut">Log out</a>
+    </div>
+    <!-- Switch Accounts Modal -->
+    <div class="switchModal">
+        <i class="fa-solid fa-x" id="x-btn-switch"></i>
+        <img src="~/client/assets/images/icon/instagram-text-black-icon.svg"
+             alt="" />
+        <form action="">
+            <input type="text" placeholder="Phone number, username, or email" />
+            <input type="password" placeholder="Password" />
+            <button>Log in</button>
+            <a asp-controller="Account" asp-action="ForgotPassword">Forgot password?</a>
+        </form>
+    </div>
+    <!-- Post Detail (Index Action) -->
+    <div class="post-comment-detail-Modal">
+        <div class="detail-post-view-side">
+            <img src="~/client/assets/images/photos/img-1.jpeg" alt="" />
+        </div>
+        <div class="functional-side">
+            <!-- 3 Dots Modal on Post Detail (Delete/Cancel) -->
+            <div class="delete-cancel">
+                <a href="">report</a>
+                <a>Delete</a>
+                <p>Cancel</p>
+            </div>
+            <div class="about-user">
+                <div class="left-side">
+                    <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                         alt="" />
+                    <span id="userName">sonava</span>
+                    <span style="margin-bottom: 10px">.</span>
+                    <span id="follow-or-following">Follow</span>
+                </div>
+                <div class="right-side">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </div>
+            <div class="comment-show-area">
+                <div>
+                    <div class="post-caption-static">
+                        <div class="">
+                            <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                                 alt="" />
+                        </div>
+                        <p>
+                            <span id="userName">sonava</span> I can feel it. Lorem ipsum
+                            dolor, sit amet consectetur adipisicing elit. Ipsa, et. Labore
+                            est distinctio impedit odit ab. Accusamus, laborum quidem,
+                            repudiandae itaque facilis sequi doloremque recusandae nobis
+                            quae ab sunt cumque.
+                        </p>
+                    </div>
+                </div>
+                <!-- Comment-View -->
+                <div class="comments">
+                    <div class="comment-1">
+                        <div class="top">
+                            <div class="comment-view">
+                                <div class="right">
+                                    <div class="">
+                                        <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                                             alt="" />
+                                    </div>
+                                    <div class="cmt">
+                                        <div class="cm1">
+                                            <p id="comment-cmt" class="comment-text">
+                                                <span id="userName">sonava</span> I can feel it. Lorem
+                                                ipsum dolor, sit amet consectetur adipisicing elit.
+                                                Ipsa, et. Labore est distinctio impedit odit ab.
+                                                Accusamus, laborum quidem, repudiandae itaque facilis
+                                                sequi doloremque recusandae nobis quae ab sunt cumque.
+                                            </p>
+                                            <span id="more-span">...more</span>
+                                            <span id="less-span">Show less</span>
+
+                                        </div>
+                                        <div class="bottom">
+                                            <span>Reply</span>
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="fa-regular fa-heart comment-like"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-2">
+                        <div class="top">
+                            <div class="comment-view">
+                                <div class="right">
+                                    <div class="">
+                                        <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                                             alt="" />
+                                    </div>
+                                    <div class="cmt">
+                                        <p id="comment-cmt" class="comment-text">
+                                            <span id="userName">sonava</span> I can feel it. Lorem
+                                            ipsum dolor, sit amet consectetur adipisicing elit.
+                                            Ipsa, et. Labore est distinctio impedit odit ab.
+                                            Accusamus, laborum quidem, repudiandae itaque facilis
+                                            sequi doloremque recusandae nobis quae ab sunt cumque.
+                                        </p>
+                                        <span id="less-span">Show less</span>
+                                        <div class="bottom">
+                                            <span>Reply</span>
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </div>
+                                    </div>
+                                    <span id="more-span">...more</span>
+                                </div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-side">
+                <div class="left">
+                    <i class="fa-regular fa-heart"></i>
+                    <img id="comment-icon-img"
+                         style="width: 36px; height: 22px"
+                         src="~/client/assets/images/icon/bubble-comment-white-icon.svg"
+                         alt="" />
+                    <img style="width: 30px; height: 22px"
+                         src="~/client/assets/images/icon/send-white-icon.svg"
+                         alt="" />
+                </div>
+                <i style="font-size: 22px"
+                   class="fa-regular fa-bookmark detail-bookmark"></i>
+            </div>
+
+            <p class="lead emoji-picker-container">
+                <textarea class="form-control textarea-control"
+                          rows="3"
+                          placeholder="Write a caption..."
+                          data-emojiable="true"></textarea>
+            </p>
+        </div>
+    </div>
+    <!-- Switch Appearence Modal -->
+    <div class="appearance-change">
+        <div class="static-top">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span>Switch appearance</span>
+            <i class="fa-regular fa-moon"></i>
+            <!-- <div>
+              <img src="~/client/assets/images/icon/sun.png" alt="">
+            </div> -->
+        </div>
+        <div class="mode">
+            <span>Dark mood</span>
+            <input type="checkbox" id="switch-mood" />
+            <label for="switch-mood">Togglee</label>
+        </div>
+    </div>
+    <!-- Responsive Top-Side Index For Mobile -->
+    <div class="mobile-top">
+        <a href="#">
+            <div class="logo row">
+                <img style="height: 72px; margin-left: -8px"
+                     class="text-logo"
+                     src="~/client/assets/images/icon/instagram-text-white-icon.svg"
+                     alt="" />
+            </div>
+        </a>
+        <div class="right-side">
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" placeholder="Search" name="" id="" />
+            </div>
+            <i class="fa-regular fa-heart"></i>
+        </div>
+    </div>
+            @RenderBody()
+    <!-- Responsive Bottom-Side Index For Mobile -->
+    <div class="mobile-bottom">
+        <a href="">
+            <div class="home row">
+                <img style="width: 38px; height: 38px"
+                     src="~/client/assets/images/icon/home-white-icon.svg"
+                     alt="" />
+            </div>
+        </a>
+        <a href="">
+            <div class="explore row">
+                <img style="width: 28px; height: 28px"
+                     src="~/client/assets/images/icon/explore-tool-black-icon.svg"
+                     alt="" />
+            </div>
+        </a>
+        <a href="">
+            <div class="reels row">
+                <img style="width: 35px; height: 25px; margin-top: 3px"
+                     src="~/client/assets/images/icon/instagram-reels-black-icon.svg"
+                     alt="" />
+            </div>
+        </a>
+        <a href="">
+            <div class="create row">
+                <i class="fa-regular fa-square-plus"></i>
+            </div>
+        </a>
+        <a href="">
+            <div class="messages row">
+                <div class="msg-notfication">
+                    <img src="~/client/assets/images/icon/messenger-white-icon.svg"
+                         alt="" />
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="profile row">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+            </div>
+        </a>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Begin emoji-picker JavaScript -->
+<script src="~/client/assets/signalr/dist/browser/signalr.min.js"></script>
+<script src="~/client/assets/js/chat.js"></script>
+<script src="~/client/assets/lib/js/config.min.js"></script>
+<script src="~/client/assets/lib/js/util.min.js"></script>
+<script src="~/client/assets/lib/js/jquery.emojiarea.min.js"></script>
+<script src="~/client/assets/lib/js/emoji-picker.min.js"></script>
+<script src="~/client/assets/js/main.js"></script>
+</html>     

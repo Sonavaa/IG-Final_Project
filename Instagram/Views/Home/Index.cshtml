@@ -1,0 +1,231 @@
+﻿@using Instagram.ViewModels.HomeViewModel
+@using Instagram.ViewModels.PostViewModel
+@model HomeVm
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container">
+    <!-- Story and Posts -->
+    <div class="main-share">
+        <section class="story-slider">
+            <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a>
+            <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a> <a asp-controller="Story" asp-action="Index">
+                <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                     alt="" />
+                <span>sonava</span>
+            </a>
+        </section>
+        <!-- Post-Slider -->
+        <section class="post-slider">
+            @await Html.PartialAsync("_PostsPartial.cshtml", @Model.Posts)
+        </section>
+    </div>
+        <!-- Edit Post Modal -->
+    <div class="create-new-post-Modal edit-post-modal">
+        <div class="navigation">
+            <span id="cancel" style="cursor: pointer">Cancel</span>
+            <span>Edit info</span>
+            <a class="share-post done-text">Done</a>
+        </div>
+        <div class="post-and-caption">
+            <div class="post-view-side">
+                <img src="~/client/assets/images/photos/img-1.jpeg" alt="" />
+            </div>
+            <div class="caption-side">
+                <div class="about-user">
+                    <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                         alt="" />
+                    <span id="userName">sonava</span>
+                </div>
+                <p class="lead emoji-picker-container">
+                    <textarea class="form-control textarea-control"
+                              rows="3"
+                              placeholder="Write a caption..."
+                              data-emojiable="true"></textarea>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Create New Post Modal -->
+    <form method="post" asp-action="Create" asp-controller="Post" class="create-new-post-Modal create-post-modal">
+        <div class="navigation">
+            <span>Create new post</span>
+            <button type="submit" id="share-text">Share</button>
+        </div>
+        <div class="post-and-caption">
+            <div class="post-view-side">
+                <img id="post-file"
+                     src="~/client/assets/images/photos/img-1.jpeg"
+                     alt="" />
+
+                     <input name="File" class="hiddenInput" type="hidden"/>
+                     <input name="Base64" class="hiddenInput3" type="hidden"/>
+            </div>
+            <div class="caption-side">
+                <div class="about-user">
+                    <img src="~/client/assets/images/profile-photos/profile.jpeg"
+                         alt="" />  
+                    <span>sonava</span>
+                </div>
+                <p class="lead emoji-picker-container">
+                    <textarea id="textarea-home" name="Caption" class="form-control textarea-control"
+                              rows="3"          
+                              placeholder="Write a caption..."
+                              data-emojiable="true"></textarea>
+                </p>
+            </div>
+        </div>
+    </form>
+    <!-- Suggestions -->
+    <div class="suggestion">
+       <div class="switch-account-in-sug">
+            <a asp-controller="Profile" asp-action="UserProfile" asp-route-id="@Model.Users.MyProfile.Id" class="switch-account">
+                <div class="left-side">
+                    @if (Model.MyProfile.ProfilePic == null)
+                    {
+                        <img src="~/client/assets/images/profile-photos/no-profile-photo.jpg" alt="" />
+                    }
+                    else
+                    {
+                        <img src="~/client/assets/images/profile-photos/@Model.MyProfile.ProfilePic" alt="" />
+                    }
+                    <div class="info">
+                        <p id="userName">@Model.Users.MyProfile.UserName</p>
+                        <p id="name">@Model.Users.MyProfile.Fullname</p>
+                    </div>
+                </div>
+            </a>
+
+            <a asp-controller="Account" asp-action="switch" id="switch">Switch</a>
+       </div>
+        <div class="navigate">
+            <span id="info">Suggested for you</span>
+            <a id="nav">See All</a>
+        </div>
+        <div class="suggests">
+            @await Html.PartialAsync("_SuggestionsPartial.cshtml", Model.Users)
+        </div>
+        <!-- Bottom section -->
+        <section class="bottom">
+            <p>
+                <a href="https://about.instagram.com/">About</a> .
+                <a href="https://help.instagram.com/">Help</a> .
+                <a href="https://about.instagram.com/blog">Press</a> .
+                <a href="https://developers.facebook.com/docs/instagram">API</a> .
+                <a href="https://about.instagram.com/about-us/careers">Jobs</a> .
+                <a href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect">Privacy</a>
+                . <a href="https://help.instagram.com/581066165581870/">Terms</a> .
+                <a href="https://www.instagram.com/explore/locations/">Locations</a>
+                .
+                <a href="https://www.instagram.com/language/preferences/?hl=en">Language</a>
+                .
+                <a href="https://accountscenter.instagram.com/meta_verified/?entrypoint=web_footer">Meta Verified</a>
+            </p>
+            <p>© 2024 INSTAGRAM FROM META</p>
+        </section>
+    </div>
+</div>

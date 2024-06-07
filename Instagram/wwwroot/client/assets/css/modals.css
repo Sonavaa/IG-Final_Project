@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&display=swap");
+html {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.create-new-post-Modal {
+  display: flex;
+  flex-direction: column;
+  width: 864px;
+  height: 531px;
+  margin: auto;
+  margin-left: 350px;
+  margin-top: 40px;
+  background-color: black;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 9999999999999999999999999;
+}
+.create-new-post-Modal .navigation {
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  gap: 39%;
+  padding: 10px 15px;
+  border-bottom: 1px solid #fff;
+}
+.create-new-post-Modal .navigation #share-post {
+  color: dodgerblue;
+  cursor: pointer;
+}
+.create-new-post-Modal .navigation #share-post:hover {
+  color: #fff;
+}
+.post-and-caption {
+  display: flex;
+}
+.create-new-post-Modal .post-and-caption .post-view-side {
+  width: 58%;
+  height: 487px;
+  object-fit: cover;
+}
+.create-new-post-Modal .post-and-caption .post-view-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom-left-radius: 10px;
+}
+.create-new-post-Modal .caption-side {
+  width: 42%;
+  padding: 0 10px;
+}
+.create-new-post-Modal .caption-side .about-user {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.create-new-post-Modal .caption-side .about-user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+.caption-side textarea {
+  width: 100%;
+  height: 180px;
+  resize: none;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+}
+.caption-side textarea:focus {
+  outline: none;
+}
+.fa-face-smile {
+  font-size: 20px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.post-comment-detail-Modal {
+  display: flex;
+  max-width: 1140px;
+  height: 655px;
+  background-color: #000;
+  margin: auto;
+  margin-top: 20px;
+  position: relative;
+}
+.post-comment-detail-Modal .detail-post-view-side {
+  width: 150%;
+  height: 100%;
+}
+.post-comment-detail-Modal .detail-post-view-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.functional-side img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+}
+.functional-side .about-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  border-bottom: 1px solid gray;
+}
+.functional-side .about-user .left-side {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.functional-side .comment-show-area {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 450px;
+  /* overflow-y: scroll; */
+  border-bottom: 1px solid gray;
+}
+.functional-side .comment-show-area .post-caption-static {
+  margin-top: 10px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  gap: 10px;
+  padding-left: 5px;
+  padding-right: 10px;
+  font-size: 13px;
+}
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.comment-view {
+  display: flex;
+  height: 25px;
+  /* align-items: center; */
+  padding: 5px;
+  font-size: 13px;
+}
+.comment-view img {
+  margin-right: 5px;
+}
+.comment-view .right {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  padding: 0 10px 0 5px;
+}
+#userName {
+  font-size: 14px;
+  font-weight: 600;
+}
+#more-span {
+  cursor: pointer;
+}
+#less-span {
+  display: none;
+  cursor: pointer;
+  color: rgb(197, 195, 195);
+}
+.comment .bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.comment .bottom .fa-ellipsis {
+  display: block;
+}
+.right .comment-view .fa-heart {
+  position: fixed;
+  right: 0;
+}
+.bottom-side {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 5px;
+}
+.bottom-side .left {
+  display: flex;
+}
+.bottom-side i {
+  font-size: 24px;
+}
+
+.delete-cancel {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: #262626;
+  border-radius: 5px;
+  font-size: 17px;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  display: none;
+}
+.delete-cancel p,
+a {
+  padding: 15px 0;
+  text-align: center;
+  cursor: pointer;
+}
+.delete-cancel a {
+  color: red;
+  font-weight: 700;
+  border-bottom: 1px solid #cccccc;
+}
+#follow-or-following {
+  cursor: pointer;
+}

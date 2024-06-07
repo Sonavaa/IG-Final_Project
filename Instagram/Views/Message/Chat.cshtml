@@ -1,0 +1,462 @@
+﻿@{
+    Layout = null;
+}
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet"
+      href="myProjects/webProject/icofont/css/icofont.min.css" />
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+<link rel="stylesheet" href="~/client/assets/css/chat-page.css" />
+<!-- Menu -->
+<div class="left-side-menu">
+    <a asp-controller="Home" asp-action="index">
+        <div class="logo row logo-img">
+            <img style="width: 80px; height: 80px"
+                 class="resp-logo bg-black"
+                 src="./client/assets/images/icon/instagram-black-logo.svg"
+                 alt="" />
+        </div>
+    </a>
+    <a asp-controller="Home" asp-action="index">
+        <div class="home row">
+            <img src="./client/assets/images/icon/home-black-icon.svg" alt="" />
+        </div>
+    </a>
+    <a href="">
+        <div class="search row">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </a>
+    <a href="./explore.html">
+        <div class="explore row">
+            <img src="./client/assets/images/icon/explore-tool-white-icon.svg"
+                 alt="" />
+        </div>
+    </a>
+    <a asp-controller="Reels" asp-action="index">
+        <div class="reels row">
+            <img src="./client/assets/images/icon/instagram-reels-white-icon.svg"
+                 alt="" />
+        </div>
+    </a>
+    <a asp-controller="Message" asp-action="index">
+        <div class="messages row">
+            <div class="msg-notfication">
+                <img src="./client/assets/images/icon/messenger-white-icon.svg"
+                     alt="" />
+                <span class="notfication">2</span>
+            </div>
+        </div>
+    </a>
+    <a href="">
+        <div class="notfications row">
+            <i class="fa-regular fa-heart"></i>
+        </div>
+    </a>
+    <a class="create-row">
+        <div class="create row">
+            <i class="fa-regular fa-square-plus"></i>
+        </div>
+    </a>
+    <input type="file" id="create-input" />
+    <a asp-controller="Profile" asp-action="MyProfile">
+        <div class="profile row">
+            <img src="./client/assets/images/profile-photos/profile.jpeg"
+                 alt="" />
+        </div>
+    </a>
+    <a href="https://www.threads.net/login" target="_blank">
+        <div class="threads row">
+            <img src="./client/assets/images/icon/threads-white-icon.svg"
+                 alt="" />
+        </div>
+    </a>
+    <div class="more row">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+</div>
+<!-- Switch Accounts Modal -->
+<div class="switchModal">
+    <i class="fa-solid fa-x"></i>
+    <div class="ig-img">
+        <img src="~/client/assets/images/icon/instagram-text-black-icon.svg" alt="">
+    </div>
+    <form action="">
+        <input type="text"
+               placeholder="Phone number, username, or email"
+               class="border border-2" />
+        <input type="password" placeholder="Password" class="border border-2" />
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="" />
+            <label class="form-check-label" for="form-check-input">Save login info</label>
+        </div>
+        <button>Log in</button>
+        <a href="~/forgot-password.html">Forgot password?</a>
+    </form>
+</div>
+<!-- New Message Modal -->
+<div class="new-message-modal hidden absolute z-[99999999999] flex flex-col justify-center mt-20 bg-[#262626] w-[38%] rounded-[10px]">
+    <div class="direction flex justify-between pl-[40%] pr-2 py-3 border-b">
+        <span class="font-bold">New Message</span>
+        <i class="fa-solid fa-times text-[20px] cursor-pointer"></i>
+    </div>
+    <div class="sent-to flex border-b">
+        <span class="text-[19px] font-semibold px-2 py-1">To:</span>
+        <input class="w-full bg-transparent text-sm" type="text" placeholder="Search...">
+    </div>
+    <div class="accounts mt-5 px-2 h-[250px] overflow-y-scroll">
+        <span>No account found.</span>
+    </div>
+    <button disabled class="bg-[#2670f5] text-xl py-2 my-3 w-[95%] rounded-[7px] flex self-center justify-center">Chat</button>
+</div>
+<section class="bg-[rgba(5,5,5,0.95)] h-full w-full ml-[75px] z-50 ">
+    <!-- msg section -->
+    <div class="flex w-[95%] overflow-hidden bg-black text-white mt-5 absolute z-50">
+        <!-- left side -->
+        <div class="overflow-y-scroll w-[395px] h-full fixed">
+            <div class="flex w-[395px] justify-start py-[13px] font-semibold fixed bg-black">
+                <div class="open-switch-modal">
+                    <a class="pl-7 pr-2 font-bold text-xl cursor-pointer">sonava</a>
+                    <i class="fa-solid fa-chevron-down mt-[5px] cursor-pointer"></i>
+                </div>
+                <svg aria-label="New message"
+                     class="new-message-director ml-[220px] cursor-pointer"
+                     color="rgb(245, 245, 245)"
+                     fill="rgb(245, 245, 245)"
+                     height="24"
+                     role="img"
+                     viewBox="0 0 24 24"
+                     width="24">
+                    <path d="M12.202 3.203H5.25a3 3 0 0 0-3 3V18.75a3 3 0 0 0 3 3h12.547a3 3 0 0 0 3-3v-6.952"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"></path>
+                    <path d="M10.002 17.226H6.774v-3.228L18.607 2.165a1.417 1.417 0 0 1 2.004 0l1.224 1.225a1.417 1.417 0 0 1 0 2.004Z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"></path>
+                    <line fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          x1="16.848"
+                          x2="20.076"
+                          y1="3.924"
+                          y2="7.153"></line>
+                </svg>
+            </div>
+            <p class="ml-7 font-bold mt-20">Messages</p>
+
+            <div class="flex flex-col space-y-1 w-full mt-2">
+                <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+                    <span>
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="imgs/1.jpg"
+                             alt="" />
+                    </span>
+
+                    <div class="flex flex-col items-start ml-[11px] mr-1">
+                        <p>Laeba</p>
+                        <p>sent you a message</p>
+                    </div>
+                    <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+                    <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+                    <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+                </a>
+                <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+                    <span>
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="imgs/1.jpg"
+                             alt="" />
+                    </span>
+
+                    <div class="flex flex-col items-start ml-[11px] mr-1">
+                        <p>Laeba</p>
+                        <p>sent you a message</p>
+                    </div>
+                    <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+                    <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+                    <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+                </a>
+                <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+                    <span>
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="imgs/1.jpg"
+                             alt="" />
+                    </span>
+
+                    <div class="flex flex-col items-start ml-[11px] mr-1">
+                        <p>Laeba</p>
+                        <p>sent you a message</p>
+                    </div>
+                    <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+                    <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+                    <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+                </a>
+                <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+                    <span>
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="imgs/1.jpg"
+                             alt="" />
+                    </span>
+
+                    <div class="flex flex-col items-start ml-[11px] mr-1">
+                        <p>Laeba</p>
+                        <p>sent you a message</p>
+                    </div>
+                    <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+                    <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+                    <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+                </a>
+                <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+                    <span>
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="imgs/1.jpg"
+                             alt="" />
+                    </span>
+
+                    <div class="flex flex-col items-start ml-[11px] mr-1">
+                        <p>Laeba</p>
+                        <p>sent you a message</p>
+                    </div>
+                    <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+                    <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+                    <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+                </a>
+                <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+                    <span>
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="imgs/1.jpg"
+                             alt="" />
+                    </span>
+
+                    <div class="flex flex-col items-start ml-[11px] mr-1">
+                        <p>Laeba</p>
+                        <p>sent you a message</p>
+                    </div>
+                    <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+                    <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+                    <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+                </a>
+                <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+                    <span>
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="imgs/1.jpg"
+                             alt="" />
+                    </span>
+
+                    <div class="flex flex-col items-start ml-[11px] mr-1">
+                        <p>Laeba</p>
+                        <p>sent you a message</p>
+                    </div>
+                    <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+                    <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+                    <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+                </a>
+                <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+                    <span>
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="imgs/1.jpg"
+                             alt="" />
+                    </span>
+
+                    <div class="flex flex-col items-start ml-[11px] mr-1">
+                        <p>Laeba</p>
+                        <p>sent you a message</p>
+                    </div>
+                    <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+                    <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+                    <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+                </a>
+                <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+                    <span>
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="imgs/1.jpg"
+                             alt="" />
+                    </span>
+
+                    <div class="flex flex-col items-start ml-[11px] mr-1">
+                        <p>Laeba</p>
+                        <p>sent you a message</p>
+                    </div>
+                    <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+                    <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+                    <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+                </a>
+                <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+                    <span>
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="imgs/1.jpg"
+                             alt="" />
+                    </span>
+
+                    <div class="flex flex-col items-start ml-[11px] mr-1">
+                        <p>Laeba</p>
+                        <p>sent you a message</p>
+                    </div>
+                    <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+                    <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+                    <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+                </a>
+                <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+                    <span>
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="imgs/1.jpg"
+                             alt="" />
+                    </span>
+
+                    <div class="flex flex-col items-start ml-[11px] mr-1">
+                        <p>Laeba</p>
+                        <p>sent you a message</p>
+                    </div>
+                    <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+                    <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+                    <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+                </a>
+                <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+                    <span>
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="imgs/1.jpg"
+                             alt="" />
+                    </span>
+
+                    <div class="flex flex-col items-start ml-[11px] mr-1">
+                        <p>Laeba</p>
+                        <p>sent you a message</p>
+                    </div>
+                    <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+                    <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+                    <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+                </a>
+                <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+                    <span>
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="imgs/1.jpg"
+                             alt="" />
+                    </span>
+
+                    <div class="flex flex-col items-start ml-[11px] mr-1">
+                        <p>Laeba</p>
+                        <p>sent you a message</p>
+                    </div>
+                    <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+                    <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+                    <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+                </a>
+                <a asp-controller="Message" asp-action="Chat" class="flex w-[100%] hover:bg-[rgba(37,36,36,0.87)] py-3 pl-[22px] pr-4">
+                    <span>
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="imgs/1.jpg"
+                             alt="" />
+                    </span>
+
+                    <div class="flex flex-col items-start ml-[11px] mr-1">
+                        <p>Laeba</p>
+                        <p>sent you a message</p>
+                    </div>
+                    <p class="mt-[22px] mr-2 text-sm text-slate-300">.</p>
+                    <p class="mt-[29px] w-[20px] text-xs text-slate-300">12h</p>
+
+                    <p class="mt-[-15px] ml-24 text-5xl font-bold text-blue-700">.</p>
+                </a>
+
+            </div>
+        </div>
+        <!-- Chat View -->
+        <div class="chat flex flex-col justify-start items-center bg-black text-white w-[73%] ml-[27%] overflow-y-scroll mt-[54px] h-[89vh]">
+
+            <div class="header">
+                <div class="left-header flex justify-between items-center gap-[5px]">
+                    <div class="pp flex items-center">
+                        <img class="w-[50px] h-[50px] rounded-full"
+                             src="~/client/assets/images/profile-photos/profile.jpeg" alt="">
+                    </div>
+                    <a href="~/profile.html" class="userName font-semibold">SUBHAN02</a>
+                </div>
+                <div class="right-header flex justify-center items-center gap-[10px] h-[50px] text-[20px] absolute z-50 right-0">
+                    <i class="fa-solid fa-phone call"></i>
+                    <i class="fa-solid fa-video video"></i>
+                    <i class="fa-solid fa-circle-info info"></i>
+                </div>
+            </div>
+
+
+
+            <div class="static-body w-full flex flex-col items-center mt-[40px]">
+                <div class="pPhoto">
+                    <img class="w-[120px] h-[120px] rounded-full"
+                         src="~/client/assets/images/profile-photos/profile.jpeg" alt="">
+                </div>
+                <h2 class="userName font-bold text-2xl my-4">SUBHAN02</h2>
+                <p class="mt-2"><span class="userName">subhan02</span>  Instagram</p>
+                <a class="view-profile pt-[3px] pb-[5px] px-4 bg-gray-600 rounded-[10px] my-2" href="~/profile.html">View Profile</a>
+            </div>
+
+
+            <div class="main-chat mt-5">
+
+                <div class="other-side-message flex items-end px-[10px]">
+                    <div class="other-pp">
+                        <img src="~/client/assets/images/profile-photos/profile.jpeg" alt="">
+                    </div>
+                    <p class="mate-s-message">
+                        Merhaba Nasılısın? Umarım İyisindir.
+                    </p>
+                </div>
+                <div class="other-side-message flex items-end px-[10px]">
+                    <div class="other-pp">
+                        <img src="https://scontent.cdninstagram.com/v/t51.2885-19/187937112_256823979526525_1045285147349282010_n.jpg?stp=dst-jpg_s100x100&_nc_cat=100&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=RS3eFqjJ1CoAX_veQVb&_nc_ad=z-m&_nc_cid=1023&_nc_ht=scontent.cdninstagram.com&oh=00_AfD5JOLcylJifQnU1FEDtiAJBFil6bmkRTuscEGbPlgUwA&oe=648A7C36" alt="">
+                    </div>
+                    <p class="mate-s-message">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, sequi.</p>
+                </div>
+
+                <div class="bu-yaka-mesaji flex w-full justify-end px-[8px]">
+                    <p class="my-message">Merhaba! Ben iyiyim pekiya Sen</p>
+                </div>
+            </div>
+            <!-- <div class="mesagge-chat">
+                                       <div class="message-text">
+                                           <li><i class="fa-regular fa-face-smile"></i></li>
+                                           <input type="checkbox" class="label" placeholder="Mesaj...">
+                                           <li><i class="fa-solid fa-microphone"></i></li>
+                                           <li><i class="fa-solid fa-image"></i></li>
+                                           <li><i class="fa-regular fa-heart"></i></li>
+                                       </div>
+                                   </div> -->
+
+
+        </div>
+        <div class="message-input w-[72.9%] h-[50px] bg-gray-600 absolute right-0 bottom-0 flex justify-between">
+            <p class="lead emoji-picker-container flex">
+                <input type="text" class="msg-input"
+                       placeholder="Message..."
+                       data-emojiable="true"></input>
+            </p>
+
+            <div class="icons">
+                <i class="fa-solid fa-microphone"></i>
+                <i class="fa-solid fa-image"></i>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+        </div>
+        <script src="~/client/assets/signalr/dist/browser/signalr.min.js"></script>
+        <script src="~/client/assets/js/chat.js"></script>
+        <script src="~/client/assets/js/chat-page.js"></script>

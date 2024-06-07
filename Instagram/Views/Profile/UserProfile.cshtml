@@ -1,0 +1,114 @@
+﻿@using Instagram.ViewModels.UserProfileViewModel
+@model UserProfileVm
+@{
+    ViewData["Title"] = "UserProfile";
+}
+<link rel="stylesheet" href="~/client/assets/css/profile.css" />
+
+<div class="container">
+    <div class="profile-view">
+        <div class="top-side">
+            <a href="">
+                <div>
+                    @if (Model.User.ProfilePic == null)
+                    {
+                        <img src="~/client/assets/images/profile-photos/no-profile-photo.jpg" alt="" />
+                    }
+                    else
+                    {
+                        <img src="~/client/assets/images/profile-photos/@Model.User.ProfilePic" alt="" />
+                    }
+                </div>
+            </a>
+            <div class="top-right">
+                <div class="edit-archive" style="justify-content:start; gap:25px;">
+                    <span id="userName">@Model.User.UserName</span>
+                    <div style="display:flex; gap:10px; align-items:center;">
+                        @if (Model.User.Followers.Any(u => u.UserFollowerId == Model.MyProfile.Id))
+                        {
+                            <a asp-controller="Profile" asp-action="UnFollow" asp-route-id="@Model.User.Id"><span id="edit">Unfollow</span></a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Profile" asp-action="Follow" asp-route-id="@Model.User.Id"><span id="edit">Follow</span></a>
+                        }
+                    </div>
+                </div>
+                <div class="post-follower-count">
+                    <span><span id="posts-count">@(Model.User.Posts == null ? "0" : Model.User.Posts.Count())</span>posts</span>
+                    <span><span id="posts-count">@(Model.User.Followers == null ? "0" : Model.User.Followers.Count())</span>followers</span>
+                    <span><span id="posts-count">@(Model.User.Followings == null ? "0" : Model.User.Followings.Count())</span>following</span>
+                </div>
+                <div class="info">
+                    <span id="name">@Model.User.Fullname</span>
+                    <p id="bio">
+                        @if (Model.User.Bio != null)
+                        {
+                            @Model.User.Bio
+                            ;
+                        }
+                        else
+                        {
+                            Model.User.Bio = "";
+                        }
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="highlights flex">
+            <div class="highlight">
+                <div class="circle">
+                    <span><i class="fa-solid fa-plus"></i></span>
+                </div>
+                <span style="font-size: 14px; font-weight: semibold; margin: 8px 0;">New</span>
+            </div>
+        </div>
+    </div>
+    <div class="posts">
+        <a href=""><span><i class="fa-brands fa-slack"></i> POSTS</span></a>
+        <a href=""><span><i class="fa-regular fa-bookmark"></i>SAVED</span></a>
+        <a href=""><span><img src="~/client/assets/images/icon/instagram-tag-icon.svg" alt="">TAGGED</span></a>
+    </div>
+    @if (Model.User.Posts.Count == 0)
+    {
+        <div class="ifNoAnyPosts" style="display:flex; flex-direction:column; align-items:center">
+            <img class="no-photo" src="~/client/assets/images/icon/no-photo-icon.svg" alt="">
+            <h3 style="font-weight: bold; margin-left: 80px;margin-top: 20px;font-size: 30px;">Share Photos</h3>
+            <span style="width: 350px;margin: 20px 0; margin-left: 80px; text-align: center;">When you share photos, they will appear on your profile.</span>
+            <p id="share" class="share">Share your first photo</p>
+            <input type="file" value="" class="hidden" id="input">
+            <section class="bottom">
+                <p style="display: flex; gap: 20px; margin-bottom: 16px;">
+                    <a href="https://about.instagram.com/">About</a>  <a href="https://help.instagram.com/">Help</a>  <a href="https://about.instagram.com/blog">Press</a>
+                    <a href="https://developers.facebook.com/docs/instagram">API</a>  <a href="https://about.instagram.com/about-us/careers">Jobs</a>  <a href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect">Privacy</a>
+                    <a href="https://help.instagram.com/581066165581870/">Terms</a>  <a href="https://www.instagram.com/explore/locations/">Locations</a>
+                    <a href="https://www.instagram.com/language/preferences/?hl=en">Language</a>
+                    <a href="https://accountscenter.instagram.com/meta_verified/?entrypoint=web_footer">Meta Verified</a>
+                </p>
+                <p>© 2024 Instagram from Meta</p>
+            </section>
+        </div>
+    }
+    else
+    {
+        <script>
+            const container = document.querySelector(".container")
+            container.style.marginTop = "50px";
+        </script>
+
+        <div style="display: flex; flex-wrap: wrap;width: 828px; padding-top:15px; padding-bottom:20px;">
+            <div class="boxes">
+                @foreach (Post post in Model.User.Posts)
+                {
+
+                    <img class="box" data-id="@post.Id"
+                         src="@post.PostUrl"
+                         alt="post" />
+                }
+
+            </div>
+        </div>
+    }
+</div>
+
+<script src="~/client/assets/js/profile.js"></script>

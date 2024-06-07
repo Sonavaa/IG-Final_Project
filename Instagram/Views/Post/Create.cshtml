@@ -1,0 +1,38 @@
+﻿@using Instagram.ViewModels.PostViewModel
+@model PostCreateVm
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form asp-controller="Post" asp-action="Create" method="post" enctype="multipart/form-data" class="create-new-post-Modal create-post-modal">
+    @* @Html.AntiForgeryToken() *@
+    <div class="navigation">
+        <span>Create new post</span>
+        <button type="submit" id="share-text">Share</button>
+    </div>
+    <div class="post-and-caption">
+        <div class="post-view-side">
+            <img id="post-file" src="~/client/assets/images/photos/@Model.PostUrl" alt="" />
+            <input required asp-for="File" type="file" id="create-input-form hiddenInput2" />
+            <span asp-validation-for="File" class="text-danger"></span>
+        </div>
+        <div class="caption-side">
+            <div class="about-user">
+                <img class="PostUrl" src="~/client/assets/images/profile-photos/@Model.MyProfile.ProfilePic" alt="" />
+                <span>sonava</span>
+            </div>
+            <p class="lead emoji-picker-container">
+                <textarea asp-for="Caption" id="textarea-input" class="form-control textarea-control" rows="3" placeholder="Write a caption..." data-emojiable="true"></textarea>
+                <span asp-validation-for="Caption" class="text-danger"></span>
+            </p>
+        </div>
+    </div>
+</form>
+
+
+<script>
+
+    const url = localStorage.getItem("postView");
+
+</script>

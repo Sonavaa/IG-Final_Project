@@ -1,0 +1,70 @@
+﻿<@{
+    Layout = "";
+}
+@model RegisterVm
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/client/assets/css/register.css">
+    <title>Instagram</title>
+</head>
+<body>
+    <div class="container">
+        <div class="group">
+            <img src="~/client/assets/images/icon/instagram-logo.png" class="instagram-logo" alt="instagram-logo">
+            <p class="msg">Sign up to see photos and videos from your friends.</p>
+            <a href="#" class="instagram-bottom">Log in with Facebook</a>
+            <div class="or-line">
+                <div class="line"></div>
+                <p class="or">OR</p>
+                <div class="line"></div>
+            </div>  
+        <form method="post" action="register" class="form">
+            <div asp-validation-summary="ModelOnly" style="color:red; width:280px; text-align:start; padding-left:50px"></div>
+                <input asp-for="Email" name="email" placeholder="Mobile Number or Email"></input>
+            <span asp-validation-for="Email" style="color:red;"></span>
+            <input  asp-for="Fullname" name="fullname" placeholder="Full Name"></input>
+            <span asp-validation-for="Fullname" style="color:red;"></span>
+            <input  asp-for="Username" name="username" placeholder="Username"></input>
+            <span asp-validation-for="Username" style="color:red;"></span>
+            <input  asp-for="Password" name="password" placeholder="Password"></input>
+            <span asp-validation-for="Password" style="color:red;"></span>
+            <div class="politics">
+                <p>People who use our service may have uploaded your contact information to Instagram. Learn More</p>
+                <p>By signing up, you agree to our Terms , Privacy Policy and Cookies Policy.</p>
+            </div>
+            <button type="submit" class="signUp">Sign up</button>
+        </form>
+        </div>
+        <div class="group">
+            <p class="have-account">
+                Have an account? <a asp-controller="Account" asp-action="Login" class="logIn">Log in</a>
+            </p>
+        </div>
+    </div>
+    <div class="getTheApp">
+        <p class="get">Get the app</p>
+        <div class="download">
+            <img src="~/client/assets/images/icon/apple-button.png" alt="applogo" class="applogo">
+            <img src="~/client/assets/images/icon/googleplay-button.png" alt="applogo" class="applogo">
+        </div>
+    </div>
+    <section class="bottom">
+        <p>
+            <a href="https://about.meta.com/" target="_blank">Meta</a> <a href="https://about.instagram.com/">About</a> <a href="https://about.instagram.com/blog" target="_blank">Blog</a> <a href="https://about.instagram.com/about-us/careers">Jobs</a> <a href="https://help.instagram.com/">Help</a>
+            <a href="https://developers.facebook.com/docs/instagram">API</a> <a href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect">Privacy</a>
+            <a href="https://help.instagram.com/581066165581870/">Terms</a> <a href="https://www.instagram.com/explore/locations/">Locations</a>
+            <a href="https://www.instagram.com/web/lite/">Instagram Lite</a> <a href="https://www.threads.net/" target="_blank">Threads</a> <a href="https://www.facebook.com/help/instagram/261704639352628">Contact Uploading & Non-Users</a>
+            <a href="https://accountscenter.instagram.com/meta_verified/?entrypoint=web_footer">Meta Verified</a>
+        </p>
+        <p>© 2024 Instagram from Meta</p>
+    </section>
+</body>
+@* <script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script> *@
+</html> 

@@ -1,0 +1,234 @@
+﻿@using Instagram.ViewModels.MessageViewModel
+@model DirectVm
+@{
+    Layout = null;
+    ViewData["Title"] = "Index";
+}
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet"
+      href="myProjects/webProject/icofont/css/icofont.min.css" />
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+<link rel="stylesheet" href="~/client/assets/css/message.css" />
+     <!-- Menu -->
+     <div class="left-side-menu">
+    <a asp-controller="Home" asp-action="index">
+          <div class="logo row logo-img">
+            <img
+              style="width: 80px; height: 80px"
+              class="resp-logo bg-black"
+              src="./client/assets/images/icon/instagram-black-logo.svg"
+              alt=""
+            />
+          </div>
+        </a>
+    <a asp-controller="Home" asp-action="index">
+          <div class="home row">
+            <img src="./client/assets/images/icon/home-black-icon.svg" alt="" />
+          </div>
+        </a>
+        <a href="">
+          <div class="search row">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </a>
+        <a href="./explore.html">
+          <div class="explore row">
+            <img
+              src="./client/assets/images/icon/explore-tool-white-icon.svg"
+              alt=""
+            />
+          </div>
+        </a>
+    <a asp-controller="Reels" asp-action="index">
+          <div class="reels row">
+            <img
+              src="./client/assets/images/icon/instagram-reels-white-icon.svg"
+              alt=""
+            />
+          </div>
+        </a>
+    <a asp-controller="Message" asp-action="index">
+          <div class="messages row">
+            <div class="msg-notfication">
+              <img
+                src="./client/assets/images/icon/messenger-white-icon.svg"
+                alt=""
+              />
+              <span class="notfication">2</span>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="notfications row">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+        </a>
+        <a class="create-row">
+          <div class="create row">
+            <i class="fa-regular fa-square-plus"></i>
+          </div>
+        </a>
+        <input type="file" id="create-input" />
+    <a asp-controller="Profile" asp-action="MyProfile">
+          <div class="profile row">
+            <img
+              src="./client/assets/images/profile-photos/profile.jpeg"
+              alt=""
+            />
+          </div>
+        </a>
+        <a href="https://www.threads.net/login" target="_blank">
+          <div class="threads row">
+            <img
+              src="./client/assets/images/icon/threads-white-icon.svg"
+              alt=""
+            />
+          </div>
+        </a>
+        <div class="more row">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>  
+<!-- Switch Accounts Modal -->
+<div class="switchModal">
+    <i class="fa-solid fa-x"></i>
+    <div class="ig-img">
+        <img src="~/client/assets/images/icon/instagram-text-black-icon.svg"
+             alt="" />
+    </div>
+    <form action="">
+        <input type="text"
+               placeholder="Phone number, username, or email"
+               class="border border-2" />
+        <input type="password" placeholder="Password" class="border border-2" />
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="" />
+            <label class="form-check-label" for="form-check-input">Save login info</label>
+        </div>
+        <button>Log in</button>
+        <a href="~/forgot-password.html">Forgot password?</a>
+    </form>
+</div>
+<!-- New Message Modal -->
+<div class="new-message-modal hidden absolute z-[99999999999] flex flex-col justify-center mt-20 bg-[#262626] w-[38%] rounded-[10px]">
+    <div class="direction flex justify-between pl-[40%] pr-2 py-3 border-b">
+        <span class="font-bold">New Message</span>
+        <i class="fa-solid fa-times text-[20px] cursor-pointer"></i>
+    </div>
+    <div class="sent-to flex border-b">
+        <span class="text-[19px] font-semibold px-2 py-1">To:</span>
+        <input class="w-full bg-transparent text-sm" type="text" placeholder="Search...">
+    </div>
+    <div class="accounts mt-5 px-2 h-[250px] overflow-y-scroll">
+        <span>No account found.</span>
+    </div>
+    <button id="chat-btn" class="pointer [#2670f5] text-xl py-2 my-3 w-[95%] rounded-[7px] flex self-center justify-center">Chat</button>
+</div>
+
+<section class="bg-[rgba(5,5,5,0.95)] h-full w-full ml-[75px] z-50">
+    <!-- msg section -->
+    <div class="flex w-full bg-black text-white mt-5 absolute z-50">
+        <!-- left side -->
+        <div class="overflow-y-scroll w-[395px] h-full fixed">
+            <div class="flex w-full justify-start py-5 font-semibold fixed bg-black">
+                <div class="open-switch-modal">
+                    <a class="pl-7 pr-2 font-bold text-xl cursor-pointer">sonava</a>
+                    <i class="fa-solid fa-chevron-down mt-[5px] cursor-pointer"></i>
+                </div>
+                <svg aria-label="New message"
+                     class="_ab6- ml-[220px] cursor-pointer"
+                     color="rgb(245, 245, 245)"
+                     fill="rgb(245, 245, 245)"
+                     height="24"
+                     role="img"
+                     viewBox="0 0 24 24"
+                     width="24">
+                    <path d="M12.202 3.203H5.25a3 3 0 0 0-3 3V18.75a3 3 0 0 0 3 3h12.547a3 3 0 0 0 3-3v-6.952"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"></path>
+                    <path d="M10.002 17.226H6.774v-3.228L18.607 2.165a1.417 1.417 0 0 1 2.004 0l1.224 1.225a1.417 1.417 0 0 1 0 2.004Z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"></path>
+                    <line fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          x1="16.848"
+                          x2="20.076"
+                          y1="3.924"
+                          y2="7.153"></line>
+                </svg>
+            </div>
+            <p class="ml-7 font-bold mt-20">Messages</p>
+
+            @{
+                if (Model != null && Model.MyDirects != null)
+                {
+                    @await Html.PartialAsync("_DirectPartial.cshtml", Model.MyDirects)
+                }
+                else
+                {
+                    <p style="margin:30px 0 0 25px">No directs available.</p> 
+                }
+            }
+
+        </div>
+        <!-- right side -->
+        <div class="flex flex-col w-[70%] ml-[25%] items-center fixed">
+            <div class="mt-[220px]">
+                <svg aria-label="Direct"
+                     class="_ab6-"
+                     color="rgb(245, 245, 245)"
+                     fill="rgb(245, 245, 245)"
+                     height="96"
+                     role="img"
+                     viewBox="0 0 96 96"
+                     width="96">
+                    <circle cx="48"
+                            cy="48"
+                            fill="none"
+                            r="47"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"></circle>
+                    <line fill="none"
+                          stroke="currentColor"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          x1="69.286"
+                          x2="41.447"
+                          y1="33.21"
+                          y2="48.804"></line>
+                    <polygon fill="none"
+                             points="47.254 73.123 71.376 31.998 24.546 32.002 41.448 48.805 47.254 73.123"
+                             stroke="currentColor"
+                             stroke-linejoin="round"
+                             stroke-width="2"></polygon>
+                </svg>
+            </div>
+            <div class="text-center mt-3 px-2 text-white">
+                <p class="text-xl font-semibold">Your Messages</p>
+                <p class="text-sm mt-2">
+                    Send private photos and messages to a friend or group.
+                </p>
+            </div>
+
+            <button id="send_msg_btn"
+                    class="bg-blue-500 pt-[4px] pb-[7px] px-5 rounded-[8px] mt-6 hover:bg-blue-700">
+                Send message
+            </button>
+        </div>
+    </div>
+</section>
+<script src="~/client/assets/signalr/dist/browser/signalr.min.js"></script>
+<script src="~/client/assets/js/chat.js"></script>
+<script src="~/client/assets/js/message.js"></script>

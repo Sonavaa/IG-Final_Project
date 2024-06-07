@@ -1,0 +1,825 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Instagram.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Instagram.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\css\\nucleo-icons.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\nucleo-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\css\\nucleo-svg.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\nucleo-svg.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\css\\perfect-scrollbar.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\perfect-scrollbar.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\css\\soft-ui-dashboard-tailwind.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\soft-ui-dashboard-tailwind.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\css\\soft-ui-dashboard-tailwind.min.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\soft-ui-dashboard-tailwind.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\css\\tooltips.css",
+      "PackagePath": "staticwebassets\\admin\\assets\\css\\tooltips.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\fonts\\nucleo-icons.eot",
+      "PackagePath": "staticwebassets\\admin\\assets\\fonts\\nucleo-icons.eot"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\fonts\\nucleo-icons.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\fonts\\nucleo-icons.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\fonts\\nucleo-icons.ttf",
+      "PackagePath": "staticwebassets\\admin\\assets\\fonts\\nucleo-icons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\fonts\\nucleo-icons.woff",
+      "PackagePath": "staticwebassets\\admin\\assets\\fonts\\nucleo-icons.woff"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\fonts\\nucleo-icons.woff2",
+      "PackagePath": "staticwebassets\\admin\\assets\\fonts\\nucleo-icons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\fonts\\nucleo.eot",
+      "PackagePath": "staticwebassets\\admin\\assets\\fonts\\nucleo.eot"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\fonts\\nucleo.ttf",
+      "PackagePath": "staticwebassets\\admin\\assets\\fonts\\nucleo.ttf"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\fonts\\nucleo.woff",
+      "PackagePath": "staticwebassets\\admin\\assets\\fonts\\nucleo.woff"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\fonts\\nucleo.woff2",
+      "PackagePath": "staticwebassets\\admin\\assets\\fonts\\nucleo.woff2"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\apple-icon.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\apple-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\bruce-mars.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\bruce-mars.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\constructions.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\constructions.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\curved-images\\curved0.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\curved-images\\curved0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\curved-images\\curved1.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\curved-images\\curved1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\curved-images\\curved14.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\curved-images\\curved14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\curved-images\\curved6.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\curved-images\\curved6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\curved-images\\curved8.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\curved-images\\curved8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\curved-images\\white-curved.jpeg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\curved-images\\white-curved.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\down-arrow-dark.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\down-arrow-dark.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\down-arrow.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\down-arrow.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\home-decor-1.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\home-decor-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\home-decor-2.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\home-decor-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\home-decor-3.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\home-decor-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\illustrations\\rocket-white.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\illustrations\\rocket-white.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\ivana-square.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\ivana-square.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\ivancik.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\ivancik.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\kal-visuals-square.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\kal-visuals-square.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\logo-ct.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\logo-ct.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\logos\\mastercard.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\logos\\mastercard.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\logos\\visa.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\logos\\visa.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\marie.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\marie.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\shapes\\waves-white.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\shapes\\waves-white.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\icon-sun-cloud.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\icon-sun-cloud.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\logo-atlassian.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\logo-atlassian.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\logo-invision.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\logo-invision.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\logo-jira.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\logo-jira.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\logo-slack.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\logo-slack.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\logo-spotify.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\logo-spotify.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\logo-webdev.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\logo-webdev.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\logo-xd.svg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\logo-xd.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\team-1.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\team-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\team-2.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\team-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\team-3.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\team-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\team-4.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\team-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\vr-bg.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\vr-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\chart-1.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\chart-1.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\chart-2.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\chart-2.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\dropdown.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\dropdown.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\fixed-plugin.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\fixed-plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\nav-pills.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\nav-pills.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\navbar-collapse.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\navbar-collapse.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\navbar-sticky.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\navbar-sticky.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\perfect-scrollbar.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\perfect-scrollbar.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\plugins\\Chart.extension.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\plugins\\Chart.extension.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\plugins\\chartjs.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\plugins\\chartjs.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\plugins\\perfect-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\plugins\\perfect-scrollbar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\sidenav-burger.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\sidenav-burger.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\soft-ui-dashboard-tailwind.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\soft-ui-dashboard-tailwind.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\soft-ui-dashboard-tailwind.min.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\soft-ui-dashboard-tailwind.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\tooltips.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\tooltips.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\client\\assets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\css\\chat-page.css",
+      "PackagePath": "staticwebassets\\client\\assets\\css\\chat-page.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\css\\explore.css",
+      "PackagePath": "staticwebassets\\client\\assets\\css\\explore.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\css\\forgot-password.css",
+      "PackagePath": "staticwebassets\\client\\assets\\css\\forgot-password.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\css\\login.css",
+      "PackagePath": "staticwebassets\\client\\assets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\css\\message.css",
+      "PackagePath": "staticwebassets\\client\\assets\\css\\message.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\css\\modals.css",
+      "PackagePath": "staticwebassets\\client\\assets\\css\\modals.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\css\\profile.css",
+      "PackagePath": "staticwebassets\\client\\assets\\css\\profile.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\css\\reels.css",
+      "PackagePath": "staticwebassets\\client\\assets\\css\\reels.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\css\\register.css",
+      "PackagePath": "staticwebassets\\client\\assets\\css\\register.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\css\\settings.css",
+      "PackagePath": "staticwebassets\\client\\assets\\css\\settings.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\css\\stories.css",
+      "PackagePath": "staticwebassets\\client\\assets\\css\\stories.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\client\\assets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\Password.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\Password.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\apple-button.png",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\apple-button.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\bubble-comment-black-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\bubble-comment-black-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\bubble-comment-white-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\bubble-comment-white-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\explore-tool-black-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\explore-tool-black-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\explore-tool-white-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\explore-tool-white-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\facebook.png",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\facebook.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\googleplay-button.png",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\googleplay-button.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\home-black-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\home-black-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\home-white-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\home-white-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\instagram-black-logo.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\instagram-black-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\instagram-drag-drop-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\instagram-drag-drop-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\instagram-logo.png",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\instagram-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\instagram-reels-black-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\instagram-reels-black-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\instagram-reels-white-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\instagram-reels-white-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\instagram-tag-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\instagram-tag-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\instagram-text-black-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\instagram-text-black-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\instagram-text-white-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\instagram-text-white-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\instagram-white-logo.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\instagram-white-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\messenger-black-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\messenger-black-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\messenger-white-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\messenger-white-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\no-photo-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\no-photo-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\password-privacy.png",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\password-privacy.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\posts-icon-square.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\posts-icon-square.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\send-white-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\send-white-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\threads-black-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\threads-black-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\icon\\threads-white-icon.svg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\icon\\threads-white-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\photos\\img-1.jpeg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\photos\\img-1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\photos\\mafia.jpg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\photos\\mafia.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\photos\\password-privacy-removebg-preview.png",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\photos\\password-privacy-removebg-preview.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\profile-photos\\RS893.jpg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\profile-photos\\RS893.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\profile-photos\\no-profile-photo.jpg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\profile-photos\\no-profile-photo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\profile-photos\\profile.jpeg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\profile-photos\\profile.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\js\\chat-page.js",
+      "PackagePath": "staticwebassets\\client\\assets\\js\\chat-page.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\js\\chat.js",
+      "PackagePath": "staticwebassets\\client\\assets\\js\\chat.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\client\\assets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\js\\message.js",
+      "PackagePath": "staticwebassets\\client\\assets\\js\\message.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\js\\modals.js",
+      "PackagePath": "staticwebassets\\client\\assets\\js\\modals.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\js\\profile.js",
+      "PackagePath": "staticwebassets\\client\\assets\\js\\profile.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\js\\settings.js",
+      "PackagePath": "staticwebassets\\client\\assets\\js\\settings.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\js\\stories.js",
+      "PackagePath": "staticwebassets\\client\\assets\\js\\stories.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\css\\emoji.css",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\css\\emoji.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\css\\emoji.css.map",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\css\\emoji.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\css\\emoji.scss",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\css\\emoji.scss"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\img\\IconsetSmiles.png",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\img\\IconsetSmiles.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\img\\IconsetSmiles_1x.png",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\img\\IconsetSmiles_1x.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\img\\IconsetW.png",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\img\\IconsetW.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\img\\IconsetW_1x.png",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\img\\IconsetW_1x.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\img\\blank.gif",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\img\\blank.gif"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\img\\emoji_spritesheet_0.png",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\img\\emoji_spritesheet_0.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\img\\emoji_spritesheet_1.png",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\img\\emoji_spritesheet_1.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\img\\emoji_spritesheet_2.png",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\img\\emoji_spritesheet_2.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\img\\emoji_spritesheet_3.png",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\img\\emoji_spritesheet_3.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\img\\emoji_spritesheet_4.png",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\img\\emoji_spritesheet_4.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\js\\config.js",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\js\\config.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\js\\config.min.js",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\js\\config.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\js\\emoji-picker.js",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\js\\emoji-picker.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\js\\emoji-picker.min.js",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\js\\emoji-picker.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\js\\jquery.emojiarea.js",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\js\\jquery.emojiarea.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\js\\jquery.emojiarea.min.js",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\js\\jquery.emojiarea.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\js\\util.js",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\js\\util.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\lib\\js\\util.min.js",
+      "PackagePath": "staticwebassets\\client\\assets\\lib\\js\\util.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\signalr\\dist\\browser\\signalr.min.js",
+      "PackagePath": "staticwebassets\\client\\assets\\signalr\\dist\\browser\\signalr.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Instagram.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Instagram.props",
+      "PackagePath": "build\\Instagram.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Instagram.props",
+      "PackagePath": "buildMultiTargeting\\Instagram.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Instagram.props",
+      "PackagePath": "buildTransitive\\Instagram.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
