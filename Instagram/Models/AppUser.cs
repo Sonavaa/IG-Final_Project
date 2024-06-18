@@ -5,8 +5,8 @@ namespace Instagram.Models
 {
     public class AppUser : IdentityUser
     {
-        public String? ProfilePic { get; set; }
-        public String Fullname { get; set; } = null!;
+        public string? ProfilePic { get; set; }
+        public string Fullname { get; set; } = null!;
         public string? Bio { get; set; }
         public string? Gender { get; set; }
         public bool IsPrivate { get; set; } = false;

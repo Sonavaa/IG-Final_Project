@@ -81,3 +81,22 @@ namespace Instagram.Controllers
         }
     }
 }
+//public async Task<IActionResult> Search(ProductSearchVm vm)
+//{
+//    var products = _context.Products.Include(x => x.ProductImages)
+//      .Include(c => c.Category).AsQueryable();
+
+//    if (vm.CategoryId != null && vm.Name == null)
+//    {
+//        products.Where(x => x.CategoryId == vm.CategoryId);
+//    }
+//    else if (vm.Name != null && vm.CategoryId == null)
+//    {
+//        products.Where(x => x.Name.ToLower().StartsWith(vm.Name.ToLower()));
+//    }
+//    else
+//    {
+//        products.Where(x => x.CategoryId == vm.CategoryId && x.Name.ToLower().StartsWith(vm.Name.ToLower()));
+//    }
+//    return View(await products.ToListAsync());
+//}

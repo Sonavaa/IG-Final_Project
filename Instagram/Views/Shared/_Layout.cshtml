@@ -1,4 +1,6 @@
-﻿
+﻿@{
+    ViewData["Title"] = "MyProfile";
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +45,7 @@
                 <p>Search</p>
             </div>
         </a>
-        <a href="~/explore.html">
+        <a asp-controller="Explore" asp-action="Index">
             <div class="explore row">
                 <img src="~/client/assets/images/icon/explore-tool-white-icon.svg"
                      alt="" />
@@ -82,8 +84,7 @@
         <input type="file" id="create-input" asp-controller="Post" asp-action="Create" formmethod="post" />
         <a asp-controller="Profile" asp-action="MyProfile">
             <div class="profile row">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
+                <i class="fa-regular fa-user"></i>
                 <p>Profile</p>
             </div>
         </a>
@@ -230,7 +231,7 @@
     </div>
     <!-- More Modal -->
     <div class="menuModal">
-        <a id="setting" asp-controller="Settings" asp-action="Index">
+        <a id="setting" asp-controller="Settings" asp-action="EditProfile">
             <i class="fa-solid fa-gear"></i>
             <span>Settings</span>
         </a>

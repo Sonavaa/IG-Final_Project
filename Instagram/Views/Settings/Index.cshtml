@@ -63,14 +63,7 @@
         <h2 id="edit-profile">Edit profile</h2>
         <div class="about-profile">
             <div class="left">
-                @if (Model.User.ProfilePic == null)
-                {
-                    <img src="~/client/assets/images/profile-photos/no-profile-photo.jpg" alt="" />
-                }
-                else
-                {
                     <img src="~/client/assets/images/profile-photos/@Model.User.ProfilePic" alt="" />
-                }
                 <div class="info">
                     <p id="userName">@Model.User.UserName</p>
                     <p id="name">@Model.User.Fullname</p>

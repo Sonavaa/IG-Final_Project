@@ -4,14 +4,7 @@
 {
     <div class="suggested-account">
         <a asp-controller="Profile" asp-action="UserProfile" asp-route-id="@user.Id" class="left-side">
-            @if (user.ProfilePic == null)
-            {
-                <img src="~/client/assets/images/profile-photos/no-profile-photo.jpg" alt="" />
-            }
-            else
-            {
                 <img src="~/client/assets/images/profile-photos/@user.ProfilePic" alt="" />
-            }
             <div class="info">
                 <p id="userName">@user.UserName</p>
                 <p id="about">Suggested for you</p>

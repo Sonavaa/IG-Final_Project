@@ -22,11 +22,10 @@ a {
 }
 
 .container {
+    margin-top:30px !important;
     display: flex;
     flex-direction: column !important;
-    justify-content: center;
     align-items: center;
-    margin-top: 200px;
     margin-right:100px;
 }
 
@@ -48,7 +47,7 @@ a {
         }
 
     .left-side-menu .more {
-        padding-left: 35px;
+        padding-left: 20px;
     }
 
     .left-side-menu .row i {
@@ -145,7 +144,7 @@ a {
 
 .profile-view {
     width: 950px;
-    height: 420px;
+    height: 348px;
     border-bottom: 1px solid #fff;
     padding-bottom: 5px;
     margin-left: 130px;

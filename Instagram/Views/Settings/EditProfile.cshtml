@@ -79,8 +79,11 @@
                     </div>
                 </div>
 
-                <span id="change-photo" style="cursor: pointer;">Change photo</span>
-                <input type="file" value="" style="display: none;" id="input" asp-for="@Model.User.ProfilePic">
+               <div class="changes-for-pp">
+                    <span id="change-photo" style="cursor: pointer;">Change photo</span>
+                    <a asp-controller="Settings" asp-action="DeleteProfilePhoto" asp-route-id="@Model.User.Id" id="delete-photo" style="cursor: pointer;">Delete photo</a>
+               </div>
+                <input type="file" value="" style="display:none"  id="input" asp-for="@Model.User.File">
                 <span style="color:red" asp-validation-for="@Model.User.File"></span>
             </div>
             <p style="font-size: 16px; font-weight: bold">Website</p>
@@ -90,15 +93,20 @@
                 app and edit your profile to change the websites in your bio.
             </span>
             <p style="font-size: 16px; font-weight: bold; margin: 30px 0 16px 0">
+                Username
+            </p>
+            <input type="text" id="bio-input" asp-for="@Model.User.UserName"></input>
+            <span style="color:red" asp-validation-for="@Model.User.UserName"></span>
+            <p style="font-size: 16px; font-weight: bold; margin: 30px 0 16px 0">
                 Bio
             </p>
-            <textarea name="" id="bio-input" asp-for="@Model.User.Bio" maxlength="150"></textarea>
+            <textarea id="bio-input" asp-for="@Model.User.Bio" maxlength="150">@Model.User.Bio</textarea>
             <span style="color:red" asp-validation-for="@Model.User.Bio"></span>
             <p style="font-size: 16px; font-weight: bold; margin: 20px 0 10px 0">
                 Gender
             </p>
             <select id="gender-selection" asp-for="@Model.User.Gender">
-                <option value="selected" selected disabled>Gender</option>
+                <option value="" selected disabled>Gender</option>
                 <option value="1">Male</option>
                 <option value="2">Female</option>
                 <option value="3">Other</option>

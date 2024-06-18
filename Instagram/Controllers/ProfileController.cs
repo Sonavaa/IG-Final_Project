@@ -33,6 +33,21 @@ namespace Instagram.Controllers
 
             return View(appUser);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Saveds()
+        {
+            AppUser appUser = await _userManager.Users
+                .Include(u => u.Followers)
+                .ThenInclude(c => c.UserFollower)
+                .Include(u => u.Followings)
+                .ThenInclude(c => c.UserFollowing)
+                .Include(u => u.Posts.Where(p => p.IsDeleted == false).OrderBy(u => u.CreatedAt))
+                .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
+
+            return View(appUser);
+        }
+
         [HttpGet]
         public async Task<IActionResult> UserProfile(string? id)
         {
@@ -99,37 +114,48 @@ namespace Instagram.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Follow(string? id)
+ [HttpGet]
+public async Task<IActionResult> Follow(string? id)
+{
+    var currentUserId = User.Identity.Name;
+
+    var following = await _context.Users
+        .Include(u => u.Followings)
+        .Include(u => u.Followers)
+        .FirstOrDefaultAsync(u => u.Id == id);
+
+    var follower = await _context.Users
+        .Include(u => u.Followings)
+        .Include(u => u.Followers)
+        .FirstOrDefaultAsync(u => u.UserName == currentUserId);
+
+    if (following == null || follower == null)
+    {
+        return NotFound();
+    }
+
+    if (!follower.Followings.Any(f => f.UserFollowingId == following.Id))
+    {
+        Follower followerDb = new Follower
         {
-            AppUser following = await _context.Users
-                .Include(u => u.Followings)
-                .Include(u => u.Followers)
-                .FirstOrDefaultAsync(u => u.Id == id);
+            UserId = following.Id,
+            UserFollowerId = follower.Id
+        };
+        Following followingDb = new Following
+        {
+            UserId = follower.Id,
+            UserFollowingId = following.Id
+        };
 
-            AppUser follower = await _context.Users
-                .Include(u => u.Followings)
-                .Include(u => u.Followers)
-                .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
-        
-                Follower followerDb = new Follower
-                {
-                    UserId = following.Id,
-                    UserFollowerId = follower.Id
-                };
-                Following followingDb = new Following
-                {
-                    UserId = follower.Id,
-                    UserFollowingId = following.Id
-                };
+        follower.Followings.Add(followingDb);
+        following.Followers.Add(followerDb);
 
-                follower.Followings.Add(followingDb);
-                following.Followers.Add(followerDb);
+        await _context.SaveChangesAsync();
+    }
 
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction("Index", "Home");
+            return NoContent();
         }
+
 
         [HttpGet]
         public async Task<IActionResult> UnFollow(string? id)
@@ -152,7 +178,7 @@ namespace Instagram.Controllers
 
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Index", "Home");
+            return NoContent();
         }
     }
 }

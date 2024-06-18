@@ -3,28 +3,20 @@
     ViewData["Title"] = "MyProfile";
 }
 <link rel="stylesheet" href="~/client/assets/css/profile.css" />
-
 <div class="container">
     <div class="profile-view">
         <div class="top-side">
             <a href="">
                 <div>
-                    @if (Model.ProfilePic == null)
-                    {
-                        <img src="~/client/assets/images/profile-photos/no-profile-photo.jpg" alt="" />
-                    }
-                    else
-                    {
                         <img src="~/client/assets/images/profile-photos/@Model.ProfilePic" alt="" />
-                    }
                 </div>
             </a>
             <div class="top-right">
                 <div class="edit-archive">
                     <span id="userName">@Model.UserName</span>
                     <div style="display:flex; gap:10px; align-items:center;">
-                        <a asp-controller="Settings" asp-action="Index"><span id="edit">Edit profile</span></a>
-                        <a asp-controller="Settings" asp-action="Index"><span id="settings"><i class="fa-solid fa-gear"></i></span></a>
+                        <a asp-controller="Settings" asp-action="EditProfile"><span id="edit">Edit profile</span></a>
+                        <a asp-controller="Settings" asp-action="EditProfile"><span id="settings"><i class="fa-solid fa-gear"></i></span></a>
                     </div>
                 </div>
                 <div class="post-follower-count">
@@ -58,8 +50,8 @@
         </div>
     </div>
     <div class="posts">
-        <a href=""><span><i class="fa-brands fa-slack"></i> POSTS</span></a>
-        <a href=""><span><i class="fa-regular fa-bookmark"></i>SAVED</span></a>
+        <a asp-controller="Profile" asp-action="MyProfile"><span><i class="fa-brands fa-slack"></i> POSTS</span></a>
+        <a asp-controller="Profile" asp-action="Saveds"><span><i class="fa-regular fa-bookmark"></i>SAVED</span></a>
         <a href=""><span><img src="~/client/assets/images/icon/instagram-tag-icon.svg" alt="">TAGGED</span></a>
     </div>
     @if (Model.Posts.Count == 0)
@@ -91,9 +83,11 @@
 
         <div style="display: flex; flex-wrap: wrap;width: 828px; padding-top:15px; padding-bottom:20px;">
             <div class="boxes">
+
+                @* @await Html.PartialAsync("_ProfileSavedsPartial.cshtml", Model.Saveds) *@
+
                 @foreach (Post post in Model.Posts)
                 {
-
                     <img class="box" data-id="@post.Id"
                          src="@post.PostUrl"
                          alt="post" />

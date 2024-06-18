@@ -27,14 +27,7 @@
                 <div class="top-side">
                     <a asp-controller="Profile" asp-action="MyProfile" asp-route-id="@post.UserId">
                         <div class="">
-                            @if (Model.MyProfile.ProfilePic == null)
-                            {
-                                <img src="~/client/assets/images/profile-photos/no-profile-photo.jpg" alt="" />
-                            }
-                            else
-                            {
-                                <img src="~/client/assets/images/profile-photos/@Model.MyProfile.ProfilePic" alt="" />
-                            }
+                            <img src="~/client/assets/images/profile-photos/@Model.MyProfile.ProfilePic" alt="" />
                         </div>
                         <div class="threeSpan">
                             <span id="userName">@Model.MyProfile.UserName</span>
@@ -60,7 +53,7 @@
 
                 <div class="bottom-side">
                     <div class="left">
-                        <a asp-controller="Post" asp-action="Like"><i class="fa-regular fa-heart"></i></a>
+                        <a data-id="@post.Id" asp-controller="Post" asp-action="Like" asp-route-id="@post.Id"><i class="@(post.Likes.Any(p=>p.UserId == Model.MyProfile.Id) ? "fa-solid" : "fa-regular") fa-heart"></i></a>
                         <img id="post-bottom-comment-icon"
                              style="width: 22px; height: 22px"
                              src="~/client/assets/images/icon/bubble-comment-white-icon.svg"
@@ -72,7 +65,7 @@
                     <i style="font-size: 22px"
                        class="fa-regular fa-bookmark bookmark"></i>
                 </div>
-                <p><span id="like">14,359</span> likes</p>
+                <p><span id="like">@(post.Likes == null ? "0" : post.Likes.Count())</span> likes</p>
                 <p id="caption" class="hidden">
                     <a href="~/profile.html" id="userName">@post.User.UserName</a> I can feel it.
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa,
@@ -102,33 +95,41 @@
     else
     {
         <div class="post">
-            <!-- 3 Dots Modal on Post (Delete/Cancel) -->
-            <div class="dots">
-                <a href="" style="color: red !important; font-weight: 700">Report</a>
-                <a asp-controller="post" asp-action="Delete" asp-route-id="@post.Id" style="color: red !important; font-weight: 700">Delete</a>
-                <a>Unfollow</a>
-                <a href="">Add to favorites</a>
-                <a href="post.html">Go to post</a>
-                <a href="">Share to</a>
-                <p id="dots-cancel">Cancel</p>
-            </div>
-            <!-- MyPost Dots Modal -->
-            <div class="myPost-dots">
-                <a style="color: red !important; font-weight: 700">Delete</a>
-                <a>Edit</a>
-                <p id="myPost-cancel">Cancel</p>
-            </div>
+
+            @if (post.User.UserName == Model.MyProfile.UserName)
+            {
+                <!-- MyPost Dots Modal -->
+                <div class="myPost-dots">
+                    <a asp-controller="post" asp-action="Delete" asp-route-id="@post.Id" style="color: red !important; font-weight: 700">Delete</a>
+
+                    <a>Edit</a>
+                    <p id="myPost-cancel">Cancel</p>
+                </div>
+            }
+            else
+            {
+                <!-- 3 Dots Modal on Post (Delete/Cancel) -->
+                <div class="dots">
+                    <a href="" style="color: red !important; font-weight: 700">Report</a>
+                    @if (post.User.Followers.Any(u => u.UserFollowerId == Model.MyProfile.Id))
+                    {
+                        <a asp-controller="Profile" asp-action="UnFollow" asp-route-id="@post.User.Id">UnFollow</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Profile" asp-action="Follow" asp-route-id="@post.User.Id">Follow</a>
+                    }
+                    <a href="">Add to favorites</a>
+                    <a href="post.html">Go to post</a>
+                    <a href="">Share to</a>
+                    <p id="dots-cancel">Cancel</p>
+                </div>
+            }
+
             <div class="top-side">
                 <a asp-controller="Profile" asp-action="UserProfile" asp-route-id="@post.UserId">
                     <div class="">
-                        @if (post.User.ProfilePic == null)
-                        {
-                            <img src="~/client/assets/images/profile-photos/no-profile-photo.jpg" alt="" />
-                        }
-                        else
-                        {
-                            <img src="~/client/assets/images/profile-photos/@post.User.ProfilePic" alt="" />
-                        }
+                        <img src="~/client/assets/images/profile-photos/@post.User.ProfilePic" alt="" />
                     </div>
                     <div class="threeSpan">
                         <span id="userName">@post.User.UserName</span>
@@ -154,7 +155,7 @@
 
             <div class="bottom-side">
                 <div class="left">
-                    <i class="fa-regular fa-heart"></i>
+                    <a data-id="@post.Id" asp-controller="Post" asp-action="Like" asp-route-id="@post.Id"><i class="@(post.Likes.Any(p=>p.UserId == Model.MyProfile.Id) ? "fa-solid" : "fa-regular") fa-heart"></i></a>
                     <img id="post-bottom-comment-icon"
                          style="width: 22px; height: 22px"
                          src="~/client/assets/images/icon/bubble-comment-white-icon.svg"
@@ -163,12 +164,16 @@
                          src="~/client/assets/images/icon/send-white-icon.svg"
                          alt="" />
                 </div>
-                <i style="font-size: 22px"
-                   class="fa-regular fa-bookmark bookmark"></i>
+                <a style="font-size: 22px"
+                   data-id="@post.Id" style="color:#fff" asp-controller="Post" asp-action="Save" asp-route-id="@post.Id"><i class="@(post.Saved.Any(p=>p.UserId == Model.MyProfile.Id) ? "fa-solid" : "fa-regular") fa-bookmark bookmark"></i></a>
             </div>
-            <p><span id="like">14,359</span> likes</p>
-            <p id="caption" class="">
-                <a href="~/profile.html" id="userName">@post.User.UserName</a> @post.Caption
+            <p><span id="like">@(post.Likes == null ? "0" : post.Likes.Count())</span> likes</p>
+            <p id="caption" class="hidden">
+                <a href="~/profile.html" id="userName">@post.User.UserName</a> I can feel it.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa,
+                et. Labore est distinctio impedit odit ab. Accusamus, laborum
+                quidem, repudiandae itaque facilis sequi doloremque recusandae
+                nobis quae ab sunt cumque.
             </p>
 
             <div class="comment-view">

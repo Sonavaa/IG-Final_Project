@@ -77,56 +77,6 @@ namespace Instagram.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(PostCreateVM vm)
         {
-            //AppUser user = await _userManager.Users.FirstOrDefaultAsync(p => p.UserName == User.Identity.Name);
-
-
-            //string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-            //user = await _userManager.FindByIdAsync(userId);
-
-
-            //if (!ModelState.IsValid)
-            //{
-            //    return View(Userpost);
-            //}
-
-            //if (Userpost.File != null)
-            //{
-            //    if (Userpost.File == null)
-            //    {
-            //        ModelState.AddModelError("File", "Add Post.");
-            //    }
-
-            //    //if (post.File.CheckFileType("video"))
-            //    //{
-            //    //    post.IsReels = true;
-            //    //}
-
-            //    if (!Userpost.File.CheckFileSize(10))
-            //    {
-            //        ModelState.AddModelError("", "File Must Be Less Than 10MB!");
-            //        return View(Userpost);
-            //    }
-            //}
-            //string uniqueFileName = await Userpost.File.SaveFilesAsync(_env.WebRootPath, "client", "assets", "images", "photos");
-
-            //Post newpost = new Post
-            //{
-            //    PostUrl = uniqueFileName,
-            //    CreatedAt = DateTime.UtcNow.AddHours(4),
-            //    CreatedBy = user.Fullname,
-            //    UserId = user.Id,
-            //    Caption = Userpost.Caption
-            //};
-
-            //if (newpost.Caption == null)
-            //{
-            //    newpost.Caption = "";
-            //}
-
-            //await _context.Posts.AddAsync(newpost);
-
-
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             var user=await _userManager.FindByIdAsync(userId);
@@ -187,24 +137,68 @@ namespace Instagram.Controllers
 
             AppUser user = await _userManager.Users.FirstOrDefaultAsync(p => p.UserName == User.Identity.Name);
 
-            bool isLiked = post.Likes.Any(l => l.UserId == user.Id && l.PostId == post.Id);
+            var isLiked = post.Likes.FirstOrDefault(s => s.UserId == user.Id && s.PostId == post.Id);
 
-            if (!isLiked)
+            if (isLiked == null)
             {
-               Like like = new Like
+                Like Liked = new Like
                 {
                     UserId = user.Id,
                     PostId = post.Id,
                     IsDeleted = false,
                 };
- 
-                post.Likes.Add(like);
-
+                post.Likes.Add(Liked);
+            }
+            else
+            {
+                isLiked.IsDeleted = true;
             }
 
             await _context.SaveChangesAsync();
-            return Json(post.Likes.Count());
+
+            return RedirectToAction("Index", "Home");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Save(int? id)
+        {
+            if (id == null) return BadRequest();
+
+            Post post = await _context.Posts
+                .Include(c => c.Saved)
+                .Include(p => p.Likes.Where(l => l.IsDeleted == false))
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (post == null) return NotFound();
+
+            AppUser user = await _userManager.Users
+                .FirstOrDefaultAsync(p => p.UserName == User.Identity.Name);
+
+            if (user == null) return Unauthorized();
+
+            var savedItem = post.Saved.FirstOrDefault(s => s.UserId == user.Id && s.PostId == post.Id);
+
+            if (savedItem == null)
+            {
+                Saved Saved = new Saved
+                {
+                    UserId = user.Id,
+                    PostId = post.Id,
+                    IsDeleted = false,
+                };
+                post.Saved.Add(Saved);
+            }
+            else
+            {
+                savedItem.IsDeleted = true;
+            }
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index", "Home");
+        }
+
+
     }
 
 }

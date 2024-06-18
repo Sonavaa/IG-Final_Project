@@ -17,7 +17,6 @@ const done_text = document.querySelector(".edit-post-Modal #done-text");
 const create_post_Modal = document.querySelector(".create-post-modal");
 const share_text = document.querySelector(".create-post-Modal #share-text");
 const edit_post_modal = document.querySelector(".edit-post-modal");
-const edit_modal_cancel_btn = document.querySelector("#cancel");
 const edit_modal_done_btn = document.querySelector(".done-text");
 
 const notfications_Modal = document.querySelector(".notfications-Modal");
@@ -32,23 +31,11 @@ const searched_account = document.querySelector(".searched-account");
 const searched_accounts = document.querySelector(".searched-accounts");
 const search_clear_all = document.querySelector("#clear_all");
 
-const post_ellipsis_dots = document.querySelector(".ellipsis .fa-ellipsis");
-const dots_cancel_btn = document.querySelector("#dots-cancel");
-const myPost_dots_cancel_btn = document.querySelector("#myPost-cancel");
-const dots_Modal = document.querySelector(".dots");
-const myPost_dots_Modal = document.querySelector(".myPost-dots");
+const post_ellipsis_dots = document.querySelectorAll(".ellipsis .fa-ellipsis");
 
-const post_img = document.querySelector(".post #post");
-const post_like_bottom_heart = document.querySelector(
-    ".post .bottom-side .left .fa-regular"
-);
 const post_like_heart = document.querySelector(".post-like");
-const post_bottom_comment_icon = document.querySelector(
-    "#post-bottom-comment-icon"
-);
-const mini_like_heart = document.querySelector(".comment-view .mini-heart");
 
-const bookmark = document.querySelector(".bookmark");
+
 const detail_page_bookmark = document.querySelector(".detail-bookmark");
 
 const view_comments = document.querySelector("#view-comments");
@@ -121,16 +108,6 @@ switch_appearance_row_more_modal.addEventListener("click", function () {
     menu_Modal.style.display = "none";
 });
 
-if (post_bottom_comment_icon != undefined) {
-
-    post_bottom_comment_icon.addEventListener("click", () => {
-        post_detail.style.display = "flex";
-        post_detail.style.position = "fixed";
-        isOpen = true;
-        body.style.overflow = "hidden";
-    });
-}
-
 
 if (view_comments != undefined) {
 
@@ -159,33 +136,79 @@ window.addEventListener("click", function (event) {
     }
 });
 
-if (bookmark != undefined) {
-    bookmark.addEventListener("click", function () {
-        if (bookmark.classList.contains("fa-regular")) {
-            bookmark.classList.remove("fa-regular");
-            bookmark.classList.add("fa-solid");
-            bookmark.style.color = "white";
-        } else {
-            bookmark.classList.remove("fa-solid");
-            bookmark.classList.add("fa-regular");
-            bookmark.style.color = "white";
-        }
-    });
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const posts = document.querySelectorAll(".post");
 
-if (mini_like_heart != undefined) {
-    mini_like_heart.addEventListener("click", function () {
-        if (mini_like_heart.classList.contains("fa-regular")) {
-            mini_like_heart.classList.remove("fa-regular");
-            mini_like_heart.classList.add("fa-solid");
-            mini_like_heart.style.color = "red";
-        } else {
-            mini_like_heart.classList.remove("fa-solid");
-            mini_like_heart.classList.add("fa-regular");
-            mini_like_heart.style.color = "white";
+    posts.forEach(post => {
+        const bookmark = post.querySelector(".bookmark");
+        bookmark.addEventListener("click", function () {
+            if (bookmark.classList.contains("fa-regular")) {
+                bookmark.classList.remove("fa-regular");
+                bookmark.classList.add("fa-solid");
+                bookmark.style.color = "white";
+            } else {
+                bookmark.classList.remove("fa-solid");
+                bookmark.classList.add("fa-regular");
+                bookmark.style.color = "white";
+            }
+        });
+
+        const mini_like_heart = post.querySelector(".comment-view .mini-heart");
+        mini_like_heart.addEventListener("click", function () {
+            if (mini_like_heart.classList.contains("fa-regular")) {
+                mini_like_heart.classList.remove("fa-regular");
+                mini_like_heart.classList.add("fa-solid");
+                mini_like_heart.style.color = "red";
+            } else {
+                mini_like_heart.classList.remove("fa-solid");
+                mini_like_heart.classList.add("fa-regular");
+                mini_like_heart.style.color = "white";
+            }
+        });
+
+        const post_img = post.querySelector(".post #post");
+        post_img.addEventListener("dblclick", function () {
+            post_like_heart.style.display = "block";
+            post_like_bottom_heart.classList.add("fa-regular");
+
+            if (post_like_bottom_heart.classList.contains("fa-regular")) {
+                post_like_bottom_heart.classList.remove("fa-regular");
+                post_like_bottom_heart.classList.add("fa-solid");
+                post_like_bottom_heart.style.color = "red";
+            }
+            setTimeout(function () {
+                post_like_heart.style.display = "none";
+            }, 1500);
+        })
+
+
+        const post_like_bottom_heart = post.querySelector(".post .bottom-side .left .fa-regular");
+        if (post_like_bottom_heart != undefined) {
+            post_like_bottom_heart.addEventListener("click", function () {
+                if (post_like_bottom_heart.classList.contains("fa-regular")) {
+                    post_like_bottom_heart.classList.remove("fa-regular");
+                    post_like_bottom_heart.classList.add("fa-solid");
+                    post_like_bottom_heart.style.color = "red";
+                } else {
+                    post_like_bottom_heart.classList.remove("fa-solid");
+                    post_like_bottom_heart.classList.add("fa-regular");
+                    post_like_bottom_heart.style.color = "white";
+                }
+            });
         }
+
+        const post_bottom_comment_icon = post.querySelector("#post-bottom-comment-icon");
+        post_bottom_comment_icon.addEventListener("click", () => {
+            post_detail.style.display = "flex";
+            post_detail.style.position = "fixed";
+            isOpen = true;
+            body.style.overflow = "hidden";
+        });
+
     });
-}
+});
+
+
 detail_page_bookmark.addEventListener("click", function () {
     if (detail_page_bookmark.classList.contains("fa-regular")) {
         detail_page_bookmark.classList.remove("fa-regular");
@@ -197,37 +220,6 @@ detail_page_bookmark.addEventListener("click", function () {
         detail_page_bookmark.style.color = "white";
     }
 });
-
-if (post_img != undefined) {
-    post_img.addEventListener("dblclick", function () {
-        post_like_heart.style.display = "block";
-        post_like_bottom_heart.classList.add("fa-regular");
-
-        if (post_like_bottom_heart.classList.contains("fa-regular")) {
-            post_like_bottom_heart.classList.remove("fa-regular");
-            post_like_bottom_heart.classList.add("fa-solid");
-            post_like_bottom_heart.style.color = "red";
-        }
-        setTimeout(function () {
-            post_like_heart.style.display = "none";
-        }, 1500);
-    })
-
-}
-
-if (post_like_bottom_heart != undefined) {
-    post_like_bottom_heart.addEventListener("click", function () {
-        if (post_like_bottom_heart.classList.contains("fa-regular")) {
-            post_like_bottom_heart.classList.remove("fa-regular");
-            post_like_bottom_heart.classList.add("fa-solid");
-            post_like_bottom_heart.style.color = "red";
-        } else {
-            post_like_bottom_heart.classList.remove("fa-solid");
-            post_like_bottom_heart.classList.add("fa-regular");
-            post_like_bottom_heart.style.color = "white";
-        }
-    });
-}
 
 more_row.addEventListener("click", function (e) {
     e.preventDefault();
@@ -288,7 +280,6 @@ window.addEventListener("click", function (event) {
 });
 
 
-
 create_btn.addEventListener("click", (e) => {
     e.preventDefault();
     create_input.click();
@@ -340,25 +331,60 @@ if (create_input != undefined) {
         }
     });
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const posts = document.querySelectorAll(".post");
 
+    posts.forEach((post) => {
+        const postEllipsisDot = post.querySelector(".ellipsis");
+        const dotsModal = post.querySelector(".dots");
+        const myPostDotsModal = post.querySelector(".myPost-dots");
+        const dotsCancelBtn = post.querySelector("#dots-cancel");
+        const myPostCancelBtn = post.querySelector("#myPost-cancel");
 
+        // Ellipsis butonuna t?kland???nda ilgili modal aç?l?r
+        postEllipsisDot.addEventListener("click", () => {
+            // Tüm modallar? kapat
+            const allModals = document.querySelectorAll(".dots, .myPost-dots");
+            allModals.forEach((modal) => {
+                modal.style.display = "none";
+            });
 
-if (dots_cancel_btn != undefined) {
-    dots_cancel_btn.addEventListener("click", function () {
-        dots_Modal.style.display = "none";
+            // Sadece t?klanan ellipsis'e ait modal aç
+            if (dotsModal) {
+                dotsModal.style.display = "flex";
+                dotsModal.style.top = `${post.offsetHeight / 2}px`;
+                dotsModal.style.left = `${post.offsetWidth / 2}px`;
+            }
+
+            // E?er myPost-dots modal varsa ve postEllipsisDot'a t?klan?rsa
+            if (myPostDotsModal) {
+                myPostDotsModal.style.display = "flex";
+                myPostDotsModal.style.top = `${post.offsetHeight / 2}px`;
+                myPostDotsModal.style.left = `${post.offsetWidth / 2}px`;
+            }
+        });
+
+        // Cancel butonuna t?kland???nda ilgili modal kapan?r
+        if (dotsCancelBtn) {
+            dotsCancelBtn.addEventListener("click", () => {
+                if (dotsModal) {
+                    dotsModal.style.display = "none";
+                }
+            });
+        }
+
+        // MyPost Cancel butonuna t?kland???nda ilgili modal kapan?r
+        if (myPostCancelBtn) {
+            myPostCancelBtn.addEventListener("click", () => {
+                if (myPostDotsModal) {
+                    myPostDotsModal.style.display = "none";
+                }
+            });
+        }
     });
-}
+});
 
-if (myPost_dots_cancel_btn != undefined) {
-    myPost_dots_cancel_btn.addEventListener("click", function () {
-        myPost_dots_Modal.style.display = "none";
-    });
-}
-if (post_ellipsis_dots != undefined) {
-    post_ellipsis_dots.addEventListener("click", function () {
-        dots_Modal.style.display = "flex";
-    });
-}
+
 
 notfications_btn.addEventListener("click", function (e) {
     e.preventDefault();
@@ -453,25 +479,33 @@ follow_following.addEventListener("click", function () {
     }
 });
 
-heart_icon_for_like.addEventListener("click", function () {
-    if (heart_icon_for_like.classList.contains("fa-regular")) {
-        heart_icon_for_like.classList.remove("fa-regular");
-        heart_icon_for_like.classList.add("fa-solid");
-        heart_icon_for_like.style.color = "red";
-    } else {
-        heart_icon_for_like.classList.remove("fa-solid");
-        heart_icon_for_like.classList.add("fa-regular");
-        heart_icon_for_like.style.color = "white";
-    }
-});
+
 
 if (post_view_on_modal != undefined) {
     post_view_on_modal.addEventListener("dblclick", function () {
+
+        heart_icon_for_like.addEventListener("click", (e) => {
+            e.preventDefault();
+            heart_icon_for_like.click();
+          
+        });
+
+        heart_icon_for_like.addEventListener("click", function () {
+            if (heart_icon_for_like.classList.contains("fa-regular")) {
+                heart_icon_for_like.classList.remove("fa-regular");
+                heart_icon_for_like.classList.add("fa-solid");
+                heart_icon_for_like.style.color = "red";
+            } else {
+                heart_icon_for_like.classList.remove("fa-solid");
+                heart_icon_for_like.classList.add("fa-regular");
+                heart_icon_for_like.style.color = "white";
+            }
+        });
+
         if (heart_icon_for_like.classList.contains("fa-regular")) {
             heart_icon_for_like.classList.remove("fa-regular");
             heart_icon_for_like.classList.add("fa-solid");
             heart_icon_for_like.style.color = "red";
-            console.log("ads");
         } else {
             heart_icon_for_like.classList.remove("fa-solid");
             heart_icon_for_like.classList.add("fa-regular");

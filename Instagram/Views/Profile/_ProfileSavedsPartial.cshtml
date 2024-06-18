@@ -1,0 +1,16 @@
+﻿@model List<Saved>
+
+
+@if (Model != null && Model.Count() > 0)
+{
+    foreach (Saved saved in Model)
+    {
+        <a asp-controller="Post" asp-action="Index" asp-route-id="@saved.PostId">
+            <img src="~/client/assets/images/photos/@saved.Post.PostUrl" alt="">
+        </a>
+    }
+}
+else
+{
+    <h3>No Saveds Yet</h3>
+}

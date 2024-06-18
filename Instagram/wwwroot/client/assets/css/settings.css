@@ -257,11 +257,23 @@ h3 {
 .info #name {
   font-size: 13px;
 }
+.changes-for-pp {
+    width: 262px;
+    margin-left: 129px;
+    display: flex;
+    justify-content: space-between;
+}
 .about-profile #change-photo {
   padding: 5px 15px;
   border-radius: 5px;
   background-color: dodgerblue;
   font-size: 14px;
+}
+.about-profile #delete-photo {
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: red;
+    font-size: 14px;
 }
 .active {
   width: 100%;
