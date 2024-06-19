@@ -20,64 +20,32 @@ namespace Instagram.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var users = await _context.Users.ToListAsync();
+            var users = await _context.Users
+                .Include(u => u.Followers)
+                .ToListAsync();
             return View(users);
         }
 
         [HttpGet]
-        public IActionResult Create()
+        public IActionResult Delete()
         {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(AppUser User)
+        public async Task<IActionResult> Delete(string id)
         {
-            if (ModelState["UserName"] == null ||
-                ModelState["Email"] == null ||
-                ModelState["Fullname"] == null ||
-                ModelState["File"] == null)
-            {
-                return View(User);
-            }
-                
-
-            if (await _context.Users.AnyAsync(x => x.UserName == User.UserName))
-            {
-                ModelState.AddModelError("", "This Username Already Exists!");
-                return View(User);
-            }
-
-            if (!User.File.CheckFileType("image"))
-            {
-                ModelState.AddModelError("", "Invalid File");
-                return View(User);
-            }
-            if (!User.File.CheckFileSize(2))
-            {
-                ModelState.AddModelError("", "Invalid File Size");
-                return View(User);
-            }
+            //AppUser? user = await _context.Users.FirstOrDefaultAsync(x => x.Id == id);
+            //if (user is null)
+            //{
+            //    return NotFound();
+            //}
 
 
-            string uniqueFileName = await User.File.SaveFilesAsync(_env.WebRootPath, "client", "assets", "images", "profile-photos");
-
-            AppUser newuser = new AppUser
-            {
-                UserName = User.UserName,
-                ProfilePic = uniqueFileName,
-                Email = User.Email,
-                //Password = User.Password,
-                //RepeatPassword = User.RepeatPassword,
-                Fullname = User.Fullname,
-                Bio = User.Bio,
-                //CreatedAt = DateTime.UtcNow.AddHours(4),
-                //CreatedBy = "Admin"
-            };
-
-            await _context.Users.AddAsync(newuser);
-            await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
+            //_context.Users.Remove(user);
+            //await _context.SaveChangesAsync();
+            //return RedirectToAction("Index", "User");
+            return View();
         }
     }
 }

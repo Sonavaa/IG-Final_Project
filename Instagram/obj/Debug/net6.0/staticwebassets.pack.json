@@ -65,18 +65,6 @@
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\nucleo.woff2"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\apple-icon.png",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\apple-icon.png"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\bruce-mars.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\bruce-mars.jpg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\constructions.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\constructions.jpg"
-    },
-    {
       "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\curved-images\\curved0.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\img\\curved-images\\curved0.jpg"
     },
@@ -101,48 +89,8 @@
       "PackagePath": "staticwebassets\\admin\\assets\\img\\curved-images\\white-curved.jpeg"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\down-arrow-dark.svg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\down-arrow-dark.svg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\down-arrow.svg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\down-arrow.svg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\favicon.png",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\favicon.png"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\home-decor-1.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\home-decor-1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\home-decor-2.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\home-decor-2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\home-decor-3.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\home-decor-3.jpg"
-    },
-    {
       "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\illustrations\\rocket-white.png",
       "PackagePath": "staticwebassets\\admin\\assets\\img\\illustrations\\rocket-white.png"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\ivana-square.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\ivana-square.jpg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\ivancik.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\ivancik.jpg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\kal-visuals-square.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\kal-visuals-square.jpg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\logo-ct.png",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\logo-ct.png"
     },
     {
       "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\logos\\mastercard.png",
@@ -153,64 +101,8 @@
       "PackagePath": "staticwebassets\\admin\\assets\\img\\logos\\visa.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\marie.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\marie.jpg"
-    },
-    {
       "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\shapes\\waves-white.svg",
       "PackagePath": "staticwebassets\\admin\\assets\\img\\shapes\\waves-white.svg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\icon-sun-cloud.png",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\icon-sun-cloud.png"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\logo-atlassian.svg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\logo-atlassian.svg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\logo-invision.svg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\logo-invision.svg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\logo-jira.svg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\logo-jira.svg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\logo-slack.svg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\logo-slack.svg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\logo-spotify.svg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\logo-spotify.svg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\logo-webdev.svg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\logo-webdev.svg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\small-logos\\logo-xd.svg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\small-logos\\logo-xd.svg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\team-1.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\team-1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\team-2.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\team-2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\team-3.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\team-3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\team-4.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\team-4.jpg"
-    },
-    {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\img\\vr-bg.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\vr-bg.jpg"
     },
     {
       "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\admin\\assets\\js\\chart-1.js",
@@ -445,8 +337,8 @@
       "PackagePath": "staticwebassets\\client\\assets\\images\\photos\\password-privacy-removebg-preview.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\profile-photos\\1d59959c-6144-4e20-bf0d-970908f02cf7_online-is.jpg",
-      "PackagePath": "staticwebassets\\client\\assets\\images\\profile-photos\\1d59959c-6144-4e20-bf0d-970908f02cf7_online-is.jpg"
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\profile-photos\\6a26fc68-c21c-4109-ba2a-e8bdd38fa56b_sohbetgah.jpg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\profile-photos\\6a26fc68-c21c-4109-ba2a-e8bdd38fa56b_sohbetgah.jpg"
     },
     {
       "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\profile-photos\\70f5f17e-512e-43ef-8084-fba265ef3df1_yoda.jpg",
@@ -465,8 +357,12 @@
       "PackagePath": "staticwebassets\\client\\assets\\images\\profile-photos\\a56f31f8-56e1-46e8-8aa5-7a6769e3acea_RS893.jpg"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\profile-photos\\no-profile-photo.jpg",
-      "PackagePath": "staticwebassets\\client\\assets\\images\\profile-photos\\no-profile-photo.jpg"
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\profile-photos\\d910a7d8-1bc1-4ddb-8e24-fcfaf61dbf43_mafia.jpg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\profile-photos\\d910a7d8-1bc1-4ddb-8e24-fcfaf61dbf43_mafia.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\profile-photos\\e399c38a-df53-45c6-aa95-3d339f31a291_no-profile-photo - Copy.jpg",
+      "PackagePath": "staticwebassets\\client\\assets\\images\\profile-photos\\e399c38a-df53-45c6-aa95-3d339f31a291_no-profile-photo - Copy.jpg"
     },
     {
       "Id": "C:\\Users\\HP\\Desktop\\IG-Final_Project\\Instagram\\wwwroot\\client\\assets\\images\\profile-photos\\profile.jpeg",

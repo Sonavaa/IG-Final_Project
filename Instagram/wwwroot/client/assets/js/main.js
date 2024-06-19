@@ -514,3 +514,57 @@ if (post_view_on_modal != undefined) {
         }
     });
 }
+
+
+let clickCount = 0;
+const label = document.getElementById('switch-mood');
+const mood_situation_text = document.getElementById('mood-situation-text');
+const static_top = document.querySelector('.static-top');
+
+
+if (label != undefined) {
+    label.addEventListener('click', (e) => {
+        clickCount++;
+        if (clickCount % 2 === 0) {
+            mood_situation_text.innerHTML = 'Dark Mode';
+            static_top.innerHTML = `
+            <i class="fa-solid fa-chevron-left"></i>
+            <span>Switch appearance</span>
+            <i class="fa-regular fa-moon"></i>
+        `;
+
+        }
+        else {
+            mood_situation_text.innerHTML = 'Light Mode';
+            static_top.innerHTML = `
+            <i class="fa-solid fa-chevron-left"></i>
+            <span>Switch appearance</span>
+            <i class="fa-regular fa-sun"></i>
+        `;
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const moodSituationText = document.getElementById('mood-situation-text');
+    const switchMood = document.getElementById('switch-mood');
+
+    function updateMode() {
+        if (switchMood.checked) {
+            body.style.backgroundColor = "#FFF";
+            document.querySelector("a").style.backgroundColor = "#000";
+            body.style.color = "#000";
+            moodSituationText.textContent = 'Light Mode';
+        } else {
+            body.style.backgroundColor = "#000";
+            body.style.color = "#FFF";
+            moodSituationText.textContent = 'Dark Mode';
+        }
+    }
+
+    // Initialize the mode based on the checkbox state
+    updateMode();
+
+    // Add event listener to toggle the mode
+    switchMood.addEventListener('change', updateMode);
+});

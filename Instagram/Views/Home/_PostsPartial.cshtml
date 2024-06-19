@@ -66,21 +66,17 @@
                        class="fa-regular fa-bookmark bookmark"></i>
                 </div>
                 <p><span id="like">@(post.Likes == null ? "0" : post.Likes.Count())</span> likes</p>
-                <p id="caption" class="hidden">
-                    <a href="~/profile.html" id="userName">@post.User.UserName</a> I can feel it.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa,
-                    et. Labore est distinctio impedit odit ab. Accusamus, laborum
-                    quidem, repudiandae itaque facilis sequi doloremque recusandae
-                    nobis quae ab sunt cumque.
+                <p id="caption">
+                    <a href="~/profile.html" id="userName">@post.User.UserName</a> @post.Caption
                 </p>
 
-                <div class="comment-view">
+                <div class="comment-view hidden" style="display:none">
                     <span id="userName">thendatype</span>
                     <span id="comment">dcsdcs</span>
                     <i class="fa-regular fa-heart mini-heart"></i>
                 </div>
                 <p id="view-comments" style="cursor: pointer">
-                    View all 36 comments
+                    View all comments
                 </p>
                 <p id="add-comment">Add a comment...</p>
                 <!-- <hr /> -->
@@ -168,21 +164,17 @@
                    data-id="@post.Id" style="color:#fff" asp-controller="Post" asp-action="Save" asp-route-id="@post.Id"><i class="@(post.Saved.Any(p=>p.UserId == Model.MyProfile.Id) ? "fa-solid" : "fa-regular") fa-bookmark bookmark"></i></a>
             </div>
             <p><span id="like">@(post.Likes == null ? "0" : post.Likes.Count())</span> likes</p>
-            <p id="caption" class="hidden">
-                <a href="~/profile.html" id="userName">@post.User.UserName</a> I can feel it.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa,
-                et. Labore est distinctio impedit odit ab. Accusamus, laborum
-                quidem, repudiandae itaque facilis sequi doloremque recusandae
-                nobis quae ab sunt cumque.
+            <p id="caption">
+                <a href="~/profile.html" id="userName">@post.User.UserName</a> @post.Caption
             </p>
-
-            <div class="comment-view">
+             
+            <div class="comment-view hidden" style="display:none">
                 <span id="userName">thendatype</span>
                 <span id="comment">dcsdcs</span>
                 <i class="fa-regular fa-heart mini-heart"></i>
             </div>
             <p id="view-comments" style="cursor: pointer">
-                View all 36 comments
+                View all comments
             </p>
             <p id="add-comment">Add a comment...</p>
             <!-- <hr /> -->

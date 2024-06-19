@@ -39,8 +39,6 @@ namespace Instagram.Controllers
                 .FirstOrDefaultAsync(c => c.UserName == User.Identity.Name),
 
                 Post = await _context.Posts
-                //.Include(p => p.Comments.OrderBy(c => c.CreatedAt).Where(c => c.IsDeleted == false))
-                //.ThenInclude(c => c.User)
                 .Include(p => p.Saved.Where(c => c.IsDeleted == false))
                 .Include(p => p.Likes.Where(pd => pd.IsDeleted == false))
                 .ThenInclude(u => u.User)

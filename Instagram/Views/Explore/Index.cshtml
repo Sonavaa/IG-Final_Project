@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Instagram.ViewModels.HomeViewModel
+@model HomeVm
+@{
+    ViewData["Title"] = "Index";
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -12,73 +17,43 @@
     <title>Instagram</title>
 </head>
 <body>
-<div class="container">
-    <div class="boxes">
-        <img class="box"
-             src="~/client/assets/images/photos/img-1.jpeg"
-             alt="" />
-        <img class="box"
-             src="~/client/assets/images/photos/img-1.jpeg"
-             alt="" />
-        <img class="box"
-             src="~/client/assets/images/photos/img-1.jpeg"
-             alt="" />
-        <img class="box"
-             src="~/client/assets/images/photos/img-1.jpeg"
-             alt="" />
-        <img id="top-right"
-             src="~/client/assets/images/profile-photos/profile.jpeg"
-             alt="" />
+    <!-- Menu -->
+    <div class="container">
+        @await Html.PartialAsync("_ExplorePostsPartial.cshtml", @Model.Posts)
+     
+ @*        <div class="boxes">
+            <img class="box"
+                 src="~/client/assets/images/photos/img-1.jpeg"
+                 alt="" />
+            <img class="box"
+                 src="~/client/assets/images/photos/img-1.jpeg"
+                 alt="" />
+            <img class="box"
+                 src="~/client/assets/images/photos/img-1.jpeg"
+                 alt="" />
+            <img class="box"
+                 src="~/client/assets/images/photos/img-1.jpeg"
+                 alt="" />
+            <img id="top-right"
+                 src="~/client/assets/images/profile-photos/profile.jpeg"
+                 alt="" />
 
-        <img class="box"
-             src="~/client/assets/images/profile-photos/profile.jpeg"
-             alt="" />
-        <img class="box"
-             src="~/client/assets/images/profile-photos/profile.jpeg"
-             alt="" />
-        <img class="box"
-             src="~/client/assets/images/profile-photos/profile.jpeg"
-             alt="" />
-        <img class="box"
-             src="~/client/assets/images/profile-photos/profile.jpeg"
-             alt="" />
-        <img id="bottom-left"
-             src="~/client/assets/images/photos/img-1.jpeg"
-             alt="" />
+            <img class="box"
+                 src="~/client/assets/images/profile-photos/profile.jpeg"
+                 alt="" />
+            <img class="box"
+                 src="~/client/assets/images/profile-photos/profile.jpeg"
+                 alt="" />
+            <img class="box"
+                 src="~/client/assets/images/profile-photos/profile.jpeg"
+                 alt="" />
+            <img class="box"
+                 src="~/client/assets/images/profile-photos/profile.jpeg"
+                 alt="" />
+            <img id="bottom-left"
+                 src="~/client/assets/images/photos/img-1.jpeg"
+                 alt="" />
+        </div> *@
     </div>
-@*     <div class="boxes">
-        <img class="box"
-             src="~/client/assets/images/photos/img-1.jpeg"
-             alt="" />
-        <img class="box"
-             src="~/client/assets/images/photos/img-1.jpeg"
-             alt="" />
-        <img class="box"
-             src="~/client/assets/images/photos/img-1.jpeg"
-             alt="" />
-        <img class="box"
-             src="~/client/assets/images/photos/img-1.jpeg"
-             alt="" />
-        <img id="top-right"
-             src="~/client/assets/images/profile-photos/profile.jpeg"
-             alt="" />
-
-        <img class="box"
-             src="~/client/assets/images/profile-photos/profile.jpeg"
-             alt="" />
-        <img class="box"
-             src="~/client/assets/images/profile-photos/profile.jpeg"
-             alt="" />
-        <img class="box"
-             src="~/client/assets/images/profile-photos/profile.jpeg"
-             alt="" />
-        <img class="box"
-             src="~/client/assets/images/profile-photos/profile.jpeg"
-             alt="" />
-        <img id="bottom-left"
-             src="~/client/assets/images/photos/img-1.jpeg"
-             alt="" />
-    </div> *@
-</div>
 </body>
 </html>

@@ -10,7 +10,14 @@
         <div class="top-side">
             <a href="">
                 <div>
+                    @if (Model.User.ProfilePic == null)
+                    {
+                        <img src="~/client/assets/images/profile-photos/e399c38a-df53-45c6-aa95-3d339f31a291_no-profile-photo - Copy.jpg" alt="" />
+                    }
+                    else
+                    {
                         <img src="~/client/assets/images/profile-photos/@Model.User.ProfilePic" alt="" />
+                    }
                 </div>
             </a>
             <div class="top-right">

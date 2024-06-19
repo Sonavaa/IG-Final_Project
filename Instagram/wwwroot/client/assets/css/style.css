@@ -509,7 +509,7 @@ a {
     width: 864px;
     height: 531px;
     margin-top: 60px;
-    margin-left: -20%;
+    margin-left: -4%;
     background-color: black;
     border-radius: 10px;
     position: absolute;
@@ -1101,7 +1101,7 @@ label:active:after {
     flex-direction: column;
     justify-content: baseline;
     width: 468px;
-    height: 825px;
+    height: 750px;
     margin: 0 auto;
     font-size: 14px;
     border-bottom: 1px solid #fff;

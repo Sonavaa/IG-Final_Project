@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Instagram",
-    "\\Instagram\\Controllers"
+    "\\Instagram\\Controllers",
+    "\\Instagram\\Views",
+    "\\Instagram\\Views\\Explore"
   ],
-  "SelectedNode": "\\Instagram\\Controllers\\SettingsController.cs",
+  "SelectedNode": "\\Instagram\\Views\\Explore\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

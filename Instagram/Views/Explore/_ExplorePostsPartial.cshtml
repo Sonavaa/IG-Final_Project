@@ -1,0 +1,12 @@
+﻿@using Instagram.ViewModels.PostViewModel
+@model PostsVm
+
+<div class="boxes">
+    @foreach (Post post in Model.Posts)
+{
+   
+        <img class="box"
+             src="@post.PostUrl"
+             alt="" />
+}
+</div>

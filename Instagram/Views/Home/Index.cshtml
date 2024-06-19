@@ -185,7 +185,14 @@
        <div class="switch-account-in-sug">
             <a asp-controller="Profile" asp-action="UserProfile" asp-route-id="@Model.Users.MyProfile.Id" class="switch-account">
                 <div class="left-side">
+                    @if (Model.MyProfile.ProfilePic == null)
+                    {
+                        <img src="~/client/assets/images/profile-photos/e399c38a-df53-45c6-aa95-3d339f31a291_no-profile-photo - Copy.jpg" alt="" />
+                    }
+                    else
+                    {
                         <img src="~/client/assets/images/profile-photos/@Model.MyProfile.ProfilePic" alt="" />
+                    }
                     <div class="info">
                         <p id="userName">@Model.Users.MyProfile.UserName</p>
                         <p id="name">@Model.Users.MyProfile.Fullname</p>
