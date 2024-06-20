@@ -77,23 +77,6 @@ namespace Instagram.Controllers
                 dbAppUser.ProfilePic = filename;
             }
 
-            if (_context.Users.Any(u => u.UserName.ToLower().Trim() == settings.User.UserName.ToLower().Trim()))
-            {
-                if (dbAppUser.UserName != settings.User.UserName)
-                {
-                    ModelState.AddModelError("", $"{settings.User.UserName} Already Taken. Choose Another One!");
-                    return View("EditProfile", settingsVM);
-                }
-                else
-                {
-                    dbAppUser.UserName = settings.User.UserName.Trim();
-                }
-            }
-            else
-            {
-                dbAppUser.UserName = settings.User.UserName.Trim();
-                dbAppUser.NormalizedUserName = settings.User.UserName.ToUpperInvariant().Trim();
-            }
             dbAppUser.Bio = settings.User.Bio;
             dbAppUser.Gender = settings.User.Gender;
 

@@ -10,7 +10,7 @@
             <div class="post">
                 <!-- 3 Dots Modal on Post (Delete/Cancel) -->
                 <div class="dots">
-                    <a href="" style="color: red !important; font-weight: 700">Report</a>
+                    <a asp-controller="profile" asp-action="BlockUser" style="color: red !important; font-weight: 700">Block</a>
                     <a asp-controller="post" asp-action="Delete" asp-route-id="@post.Id" style="color: red !important; font-weight: 700">Delete</a>
                     <a>Unfollow</a>
                     <a href="">Add to favorites</a>
@@ -27,7 +27,14 @@
                 <div class="top-side">
                     <a asp-controller="Profile" asp-action="MyProfile" asp-route-id="@post.UserId">
                         <div class="">
-                            <img src="~/client/assets/images/profile-photos/@Model.MyProfile.ProfilePic" alt="" />
+                            @if (Model.MyProfile.ProfilePic == null || Model.MyProfile.ProfilePic == "no-profile-photo.jpg")
+                            {
+                                <img src="~/client/assets/images/profile-photos/e399c38a-df53-45c6-aa95-3d339f31a291_no-profile-photo - Copy.jpg" alt="" />
+                            }
+                            else
+                            {
+                                <img src="~/client/assets/images/profile-photos/Model.MyProfile.ProfilePic" alt="" />
+                            }
                         </div>
                         <div class="threeSpan">
                             <span id="userName">@Model.MyProfile.UserName</span>
@@ -53,7 +60,7 @@
 
                 <div class="bottom-side">
                     <div class="left">
-                        <a data-id="@post.Id" asp-controller="Post" asp-action="Like" asp-route-id="@post.Id"><i class="@(post.Likes.Any(p=>p.UserId == Model.MyProfile.Id) ? "fa-solid" : "fa-regular") fa-heart"></i></a>
+                        <a data-id="@post.Id" asp-controller="Post" asp-action="Like" asp-route-id="@post.Id"><i id="like-photo" class="@(post.Likes.Any(p=>p.UserId == Model.MyProfile.Id) ? "activeForLike fa-solid" : "fa-regular") fa-heart like"></i></a>
                         <img id="post-bottom-comment-icon"
                              style="width: 22px; height: 22px"
                              src="~/client/assets/images/icon/bubble-comment-white-icon.svg"
@@ -106,7 +113,7 @@
             {
                 <!-- 3 Dots Modal on Post (Delete/Cancel) -->
                 <div class="dots">
-                    <a href="" style="color: red !important; font-weight: 700">Report</a>
+                    <a asp-controller="profile" asp-action="BlockUser" style="color: red !important; font-weight: 700">Block</a>
                     @if (post.User.Followers.Any(u => u.UserFollowerId == Model.MyProfile.Id))
                     {
                         <a asp-controller="Profile" asp-action="UnFollow" asp-route-id="@post.User.Id">UnFollow</a>
@@ -151,7 +158,7 @@
 
             <div class="bottom-side">
                 <div class="left">
-                    <a data-id="@post.Id" asp-controller="Post" asp-action="Like" asp-route-id="@post.Id"><i class="@(post.Likes.Any(p=>p.UserId == Model.MyProfile.Id) ? "fa-solid" : "fa-regular") fa-heart"></i></a>
+                    <a data-id="@post.Id" asp-controller="Post" asp-action="Like" asp-route-id="@post.Id"><i class="@(post.Likes.Any(p=>p.UserId == Model.MyProfile.Id) ? "activeForLike fa-solid" : "fa-regular") fa-heart like"></i></a>
                     <img id="post-bottom-comment-icon"
                          style="width: 22px; height: 22px"
                          src="~/client/assets/images/icon/bubble-comment-white-icon.svg"

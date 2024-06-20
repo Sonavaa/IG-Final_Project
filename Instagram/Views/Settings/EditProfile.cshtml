@@ -56,7 +56,7 @@
         </div>
         <div class="blocked row">
             <i class="fa-solid fa-ban"></i>
-            <span>Blocked</span>
+            <a asp-controller="profile" asp-action="BlockedUsers">Blocked</a>
         </div>
     </div>
     <div class="dynamic-side Update-Profile">
@@ -65,9 +65,9 @@
             <h2 id="edit-profile">Edit profile</h2>
             <div class="about-profile">
                 <div class="left">
-                    @if (Model.User.ProfilePic == null)
+                    @if (Model.User.ProfilePic == null || Model.User.ProfilePic == "no-profile-photo.jpg")
                     {
-                        <img src="~/client/assets/images/profile-photos/no-profile-photo.jpg" alt="" />
+                        <img src="~/client/assets/images/profile-photos/e399c38a-df53-45c6-aa95-3d339f31a291_no-profile-photo - Copy.jpg" alt="" />
                     }
                     else
                     {
@@ -92,11 +92,6 @@
                 Editing your links is only available on mobile. Visit the Instagram
                 app and edit your profile to change the websites in your bio.
             </span>
-            <p style="font-size: 16px; font-weight: bold; margin: 30px 0 16px 0">
-                Username
-            </p>
-            <input type="text" id="bio-input" asp-for="@Model.User.UserName"></input>
-            <span style="color:red" asp-validation-for="@Model.User.UserName"></span>
             <p style="font-size: 16px; font-weight: bold; margin: 30px 0 16px 0">
                 Bio
             </p>

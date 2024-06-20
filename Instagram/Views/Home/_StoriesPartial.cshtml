@@ -1,0 +1,34 @@
+﻿@using Instagram.ViewModels.HomeViewModel
+@model SuggestionsVm
+@for (int i = 0; i < 5; i++)
+{
+    <a asp-controller="Story" asp-action="Index">
+        <img src="~/client/assets/images/profile-photos/e399c38a-df53-45c6-aa95-3d339f31a291_no-profile-photo - Copy.jpg" alt="" />
+        <span>sonava</span>
+    </a>
+}
+@foreach (AppUser user in Model.Suggestions)
+{
+        <a asp-controller="Story" asp-action="Index">
+            @if (user.ProfilePic == null)
+            {
+                <img src="~/client/assets/images/profile-photos/e399c38a-df53-45c6-aa95-3d339f31a291_no-profile-photo - Copy.jpg" alt="" />
+            }
+            else
+            {
+                <img src="~/client/assets/images/profile-photos/@user.ProfilePic" alt="" />
+            }
+            <span>@user.UserName</span>
+        </a>
+}
+@for (int i = 0; i < 8; i++)
+{
+    <a asp-controller="Story" asp-action="Index">
+        <img src="~/client/assets/images/profile-photos/e399c38a-df53-45c6-aa95-3d339f31a291_no-profile-photo - Copy.jpg" alt="" />
+        <span>user</span>
+    </a>
+}
+
+
+
+

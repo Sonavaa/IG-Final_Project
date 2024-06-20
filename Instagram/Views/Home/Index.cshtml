@@ -8,116 +8,7 @@
     <!-- Story and Posts -->
     <div class="main-share">
         <section class="story-slider">
-            <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a>
-            <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a> <a asp-controller="Story" asp-action="Index">
-                <img src="~/client/assets/images/profile-photos/profile.jpeg"
-                     alt="" />
-                <span>sonava</span>
-            </a>
+            @await Html.PartialAsync("_StoriesPartial.cshtml", @Model.Users)
         </section>
         <!-- Post-Slider -->
         <section class="post-slider">
@@ -185,7 +76,7 @@
        <div class="switch-account-in-sug">
             <a asp-controller="Profile" asp-action="UserProfile" asp-route-id="@Model.Users.MyProfile.Id" class="switch-account">
                 <div class="left-side">
-                    @if (Model.MyProfile.ProfilePic == null)
+                    @if (Model.MyProfile.ProfilePic == null || Model.MyProfile.ProfilePic == "no-profile-photo.jpg")
                     {
                         <img src="~/client/assets/images/profile-photos/e399c38a-df53-45c6-aa95-3d339f31a291_no-profile-photo - Copy.jpg" alt="" />
                     }

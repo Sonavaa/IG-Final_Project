@@ -114,48 +114,37 @@ namespace Instagram.Controllers
             return RedirectToAction("Index", "Home");
         }
 
- [HttpGet]
-public async Task<IActionResult> Follow(string? id)
-{
-    var currentUserId = User.Identity.Name;
-
-    var following = await _context.Users
-        .Include(u => u.Followings)
-        .Include(u => u.Followers)
-        .FirstOrDefaultAsync(u => u.Id == id);
-
-    var follower = await _context.Users
-        .Include(u => u.Followings)
-        .Include(u => u.Followers)
-        .FirstOrDefaultAsync(u => u.UserName == currentUserId);
-
-    if (following == null || follower == null)
-    {
-        return NotFound();
-    }
-
-    if (!follower.Followings.Any(f => f.UserFollowingId == following.Id))
-    {
-        Follower followerDb = new Follower
+        [HttpGet]
+        public async Task<IActionResult> Follow(string? id)
         {
-            UserId = following.Id,
-            UserFollowerId = follower.Id
-        };
-        Following followingDb = new Following
-        {
-            UserId = follower.Id,
-            UserFollowingId = following.Id
-        };
+            AppUser following = await _context.Users
+                .Include(u => u.Followings)
+                .Include(u => u.Followers)
+                .FirstOrDefaultAsync(u => u.Id == id);
 
-        follower.Followings.Add(followingDb);
-        following.Followers.Add(followerDb);
+            AppUser follower = await _context.Users
+                .Include(u => u.Followings)
+                .Include(u => u.Followers)
+                .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
 
-        await _context.SaveChangesAsync();
-    }
+            Follower followerDb = new Follower
+            {
+                UserId = following.Id,
+                UserFollowerId = follower.Id
+            };
+            Following followingDb = new Following
+            {
+                UserId = follower.Id,
+                UserFollowingId = following.Id
+            };
 
-            return NoContent();
+            follower.Followings.Add(followingDb);
+            following.Followers.Add(followerDb);
+
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("UserProfile", "Profile", new { id = id });
         }
-
 
         [HttpGet]
         public async Task<IActionResult> UnFollow(string? id)
@@ -178,7 +167,29 @@ public async Task<IActionResult> Follow(string? id)
 
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return RedirectToAction("UserProfile", "Profile", new { id = id });
+        }
+        [HttpGet]
+        public async Task<IActionResult> BlockUser(string? id)
+        {
+            if (id == null) return BadRequest();
+
+            AppUser user = await _context.Users.FirstOrDefaultAsync(c => c.Id == id);
+
+            if (user == null) return NotFound();
+
+            user.İsBlock = true;
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index","Home");
+        }
+        [HttpGet]
+        public async Task<IActionResult> BlockedUsers(string? block)
+        {
+            List<AppUser> users = await _context.Users.ToListAsync();
+
+            return View(users);
         }
     }
 }

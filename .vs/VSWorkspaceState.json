@@ -2,10 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\Instagram",
+    "\\Instagram\\Areas",
+    "\\Instagram\\Areas\\Admin",
+    "\\Instagram\\Areas\\Admin\\Views",
+    "\\Instagram\\Areas\\Admin\\Views\\Shared",
     "\\Instagram\\Controllers",
     "\\Instagram\\Views",
     "\\Instagram\\Views\\Explore"
   ],
-  "SelectedNode": "\\Instagram\\Views\\Explore\\Index.cshtml",
+  "SelectedNode": "\\Instagram\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

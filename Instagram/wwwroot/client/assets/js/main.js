@@ -568,3 +568,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add event listener to toggle the mode
     switchMood.addEventListener('change', updateMode);
 });
+
+$('.like').on('click', function () {
+    $(this).toggleClass('fa-regular fa-solid');
+    if ($(this).hasClass('fa-solid')) {
+        $(this).addClass('activeForLike');
+    } else {
+        $(this).removeClass('activeForLike');
+    }
+});

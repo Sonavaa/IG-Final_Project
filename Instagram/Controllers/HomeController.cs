@@ -77,26 +77,7 @@ namespace Instagram.Controllers
 
             List<AppUser> users = await _context.Users.Where(u => u.UserName.ToLower().Contains(search.ToLower()) || u.Fullname.ToLower().Contains(search.ToLower())).ToListAsync();
 
-            return PartialView("/Views/Shared/_SearchUserPartial.cshtml", users);
+            return PartialView("/Views/Home/_SearchUserPartial.cshtml", users);
         }
     }
 }
-//public async Task<IActionResult> Search(ProductSearchVm vm)
-//{
-//    var products = _context.Products.Include(x => x.ProductImages)
-//      .Include(c => c.Category).AsQueryable();
-
-//    if (vm.CategoryId != null && vm.Name == null)
-//    {
-//        products.Where(x => x.CategoryId == vm.CategoryId);
-//    }
-//    else if (vm.Name != null && vm.CategoryId == null)
-//    {
-//        products.Where(x => x.Name.ToLower().StartsWith(vm.Name.ToLower()));
-//    }
-//    else
-//    {
-//        products.Where(x => x.CategoryId == vm.CategoryId && x.Name.ToLower().StartsWith(vm.Name.ToLower()));
-//    }
-//    return View(await products.ToListAsync());
-//}

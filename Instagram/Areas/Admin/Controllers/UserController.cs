@@ -35,17 +35,16 @@ namespace Instagram.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(string id)
         {
-            //AppUser? user = await _context.Users.FirstOrDefaultAsync(x => x.Id == id);
-            //if (user is null)
-            //{
-            //    return NotFound();
-            //}
+            AppUser? user = await _context.Users.FirstOrDefaultAsync(x => x.Id == id);
+            if (user is null)
+            {
+                return NotFound();
+            }
 
 
-            //_context.Users.Remove(user);
-            //await _context.SaveChangesAsync();
-            //return RedirectToAction("Index", "User");
-            return View();
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index", "User");
         }
     }
 }

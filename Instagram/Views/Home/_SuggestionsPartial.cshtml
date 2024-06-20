@@ -5,7 +5,7 @@
     <div class="suggested-account">
         <a asp-controller="Profile" asp-action="UserProfile" asp-route-id="@user.Id" class="left-side">
 
-            @if (user.ProfilePic == null)
+            @if (user.ProfilePic == null || user.ProfilePic == "no-profile-photo.jpg")
             {
                 <img src="~/client/assets/images/profile-photos/e399c38a-df53-45c6-aa95-3d339f31a291_no-profile-photo - Copy.jpg" alt="" />
             }
